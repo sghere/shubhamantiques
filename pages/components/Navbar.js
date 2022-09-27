@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 
 import {
   BsFillSunFill,
@@ -8,8 +8,12 @@ import {
   BsEmojiSunglassesFill,
   BsSunFill,
 } from 'react-icons/bs';
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { ImCross } from 'react-icons/im';
 
 const Navbar = ({ Theme, setTheme }) => {
+  const [ToggleNavbar, setToggleNavbar] = useState(true);
+
   return (
     <nav className="topnav">
       <div class="navbar-logo">
@@ -17,7 +21,9 @@ const Navbar = ({ Theme, setTheme }) => {
           <a className="navitem logo">Shubham Antiques</a>
         </Link>
       </div>
-      <ul className="topnav-links">
+      <ul
+        className={'topnav-links hide-sm ' + (ToggleNavbar ? '' : 'openmenu')}
+      >
         <li className="navitem">Shop</li>
         <li className="navitem">Login</li>
       </ul>
@@ -32,6 +38,12 @@ const Navbar = ({ Theme, setTheme }) => {
         </li>
         <li className="navitem">
           {Theme ? <BsEmojiSunglasses /> : <BsEmojiSunglassesFill />}
+        </li>
+        <li
+          className="navitem show-sm"
+          onClick={() => setToggleNavbar(!ToggleNavbar)}
+        >
+          {ToggleNavbar ? <GiHamburgerMenu /> : <ImCross />}
         </li>
       </ul>
     </nav>

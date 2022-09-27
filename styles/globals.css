@@ -91,6 +91,7 @@
   --text-color: var(--gray2);
   --h-color: #fff;
   --nav-shadow: 4px 0 10px -3px #010101;
+  --nav-shadow-bottom: 0px 15px 10px -20px #010101;
   --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.38);
   --toc-shadow: rgba(0, 0, 0, 0.7) 0px 10px 20px 0px;
   --nav-bg: var(--gray5);
@@ -118,4 +119,11 @@
 
 main {
   margin-top: var(--nav-width);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --font-size: 15px;
+    --nav-width: 3em;
+  }
 }

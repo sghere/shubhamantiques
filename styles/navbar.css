@@ -25,7 +25,7 @@
 }
 .navitem:hover {
   cursor: pointer;
-  transform: scale(1.1);
+  color: var(--h-color);
 }
 
 .topnav-links {
@@ -35,4 +35,30 @@
 
 .logo {
   font-family: 'Pacifico', cursive;
+}
+
+.show-sm {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hide-sm {
+    display: none;
+  }
+  .show-sm {
+    display: grid;
+  }
+  .openmenu {
+    display: grid;
+    padding: 20px 0px;
+    gap: 20px;
+
+    width: 100%;
+    position: absolute;
+    top: var(--nav-width);
+    background-color: var(--nav-bg);
+    transition: height 0.3s;
+
+    box-shadow: var(--nav-shadow-bottom);
+  }
 }

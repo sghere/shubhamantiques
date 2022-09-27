@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Layout from './components/Layout';
 
 export default function Landing() {
-  const [Theme, setTheme] = useState(false);
+  const [Theme, setTheme] = useState(true);
 
   return (
     <>
