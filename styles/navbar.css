@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+.topnav {
+  background-color: var(--nav-bg);
+  box-shadow: var(--nav-shadow);
+  display: flex;
+  justify-content: space-between;
+  height: var(--nav-width);
+  width: 100%;
+  position: fixed;
+  transition: top 0.3s ease;
+  /* padding: 0em 1em; */
+}
+
+.navitem {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  color: var(--text-color);
+  font-family: 'Anton', sans-serif;
+  margin: 0 1em;
+  transition: 0.3s;
+}
+.navitem:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.topnav-links {
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  font-family: 'Pacifico', cursive;
+}
