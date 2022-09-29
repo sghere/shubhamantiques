@@ -8,10 +8,10 @@ const HeroSection = () => {
           <div className="grid fr2 pt-5">
             <div className="grid place-center">
               <h1 className="text-center">
-                Decorate Yourself with
-                <span className="gradient"> Timeless Things</span>
+                decorate yourself with
+                <span className="gradient"> timeless things</span>
                 <br />
-                <button className="button-33">Start Shopping</button>
+                <button className="btn">get started</button>
               </h1>
             </div>
             <div className="grid place-center">

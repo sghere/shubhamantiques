@@ -29,9 +29,9 @@ const Navbar = ({ Theme, setTheme }) => {
         }
       >
         <Link href="/shop">
-          <li className="navitem">Shop</li>
+          <li className="navitem">shop</li>
         </Link>
-        <li className="navitem">Login</li>
+        <li className="navitem">login</li>
       </ul>
       <ul className="topnav-links">
         <li

@@ -42,6 +42,7 @@
 }
 
 :root {
+  --primary-color: #4834d4;
   --red: #ff3860;
   --red-dark: #ff1443;
   --red-light: #ff5c7c;
@@ -81,6 +82,11 @@
     var(--orange-light),
     var(--orange-dark) 85%
   );
+  --blue-grad: linear-gradient(
+    298deg,
+    rgba(0, 17, 139, 1) 38%,
+    rgba(0, 212, 255, 0) 100%
+  );
   --green-grad: linear-gradient(
     to bottom right,
     var(--green-light),
@@ -109,6 +115,22 @@
   transition: all 0.3s ease;
 }
 
+::selection {
+  background: var(--primary-color);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+}
+
 .appcss {
   background: var(--background);
   color: var(--text-color);
@@ -127,6 +149,28 @@
 
 main {
   margin-top: var(--nav-width);
+}
+
+/* ------------Button--------------- */
+.btn {
+  color: var(--text-color);
+  font-size: 1rem;
+  padding: 10px 30px;
+  background: none;
+  border: 2px solid var(--text-color);
+  transition: 0.3s;
+  font-weight: 600;
+}
+.btn:hover {
+  cursor: pointer;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  background-color: var(--background);
+  box-shadow: 2px 5px;
+}
+.btn:active {
+  transform: scale(0.95);
+  box-shadow: 0px 0px;
 }
 
 @media (max-width: 768px) {
