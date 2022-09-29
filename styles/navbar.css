@@ -63,7 +63,7 @@
 }
 
 /* ------------------------LOGIN Hover------------------------------------ */
-.loginContainer {
+.modalContainer {
   display: grid;
   place-items: center;
   height: 100vh;
@@ -82,33 +82,39 @@
   animation: SwingIn 0.3s ease 0s 1 normal forwards;
 }
 
-.loginCard {
+.modalCard {
   background-color: var(--card-bg);
   padding: 2rem;
   min-width: 500px;
   border: 2px solid var(--primary-color);
 }
-.loginHeader {
+.modalHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.loginCloseBtn {
+.modalCloseBtn {
   transition: 0.3s;
 }
-.loginCloseBtn:hover {
+.modalCloseBtn:hover {
   cursor: pointer;
   color: var(--primary-color);
   transform: scale(1.01);
 }
 
-.loginBody {
+.modalBody {
   padding-top: 50px;
   padding-bottom: 20px;
   font-weight: 500;
   display: grid;
   gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .modalCard {
+    min-width: 230px;
+  }
 }
 
 .input {
@@ -128,12 +134,6 @@
   border-radius: 2px;
   border-bottom: 2px solid var(--primary-color);
   color: var(--text-color);
-}
-
-@media (max-width: 768px) {
-  .loginCard {
-    min-width: 230px;
-  }
 }
 
 .flex {

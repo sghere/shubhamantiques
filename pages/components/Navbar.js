@@ -56,18 +56,18 @@ const Navbar = ({ Theme, setTheme }) => {
 
         {/* </div> */}
       </nav>
-      <div className={'loginContainer ' + (LoginToggle ? 'Show' : 'Hide')}>
-        <div class="loginCard">
-          <div className="loginHeader">
+      <div className={'modalContainer ' + (LoginToggle ? 'Show' : 'Hide')}>
+        <div class="modalCard">
+          <div className="modalHeader">
             <h1>login</h1>
             <div
-              className="loginCloseBtn"
+              className="modalCloseBtn"
               onClick={() => setLoginToggle(!LoginToggle)}
             >
               <ImCross />
             </div>
           </div>
-          <div class="loginBody">
+          <div class="modalBody">
             <input className="input" placeholder="username" type="text" />
             <input className="input" placeholder="password" type="text" />
             <button className="btn">enter the game</button>

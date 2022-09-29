@@ -49,9 +49,6 @@ video {
   gap: 1rem;
   grid-template-columns: 1fr 1fr;
 }
-.w-100 {
-  width: 100%;
-}
 
 @media (max-width: 768px) {
   .fr2 {
