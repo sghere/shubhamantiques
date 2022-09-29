@@ -62,7 +62,7 @@
   }
 }
 
-/* ------------------------LOGIN Hover------------------------------------ */
+/* ------------------------Modal---------------------- */
 .modalContainer {
   display: grid;
   place-items: center;
@@ -83,6 +83,7 @@
 }
 
 .modalCard {
+  display: grid;
   background-color: var(--card-bg);
   padding: 2rem;
   min-width: 500px;

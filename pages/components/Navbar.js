@@ -10,6 +10,7 @@ import {
 } from 'react-icons/bs';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { ImCross } from 'react-icons/im';
+import Modal from './Modal';
 
 const Navbar = ({ Theme, setTheme }) => {
   const [ToggleNavbar, setToggleNavbar] = useState(true);
@@ -56,7 +57,15 @@ const Navbar = ({ Theme, setTheme }) => {
 
         {/* </div> */}
       </nav>
-      <div className={'modalContainer ' + (LoginToggle ? 'Show' : 'Hide')}>
+      <Modal ModalToggle={LoginToggle} setModalToggle={setLoginToggle}>
+        <input className="input" placeholder="username" type="text" />
+        <input className="input" placeholder="password" type="text" />
+        <button className="btn">enter the game</button>
+        <hr />
+        <button className="btn btn-white">with google</button>
+        <button className="btn btn-blue">with facebook</button>
+      </Modal>
+      {/* <div className={'modalContainer ' + (LoginToggle ? 'Show' : 'Hide')}>
         <div class="modalCard">
           <div className="modalHeader">
             <h1>login</h1>
@@ -76,7 +85,7 @@ const Navbar = ({ Theme, setTheme }) => {
             <button className="btn btn-blue">with facebook</button>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };
