@@ -1,0 +1,85 @@
+/* CSS */
+.button-33 {
+  background: var(--orange-pink);
+  border-radius: 100px;
+  color: var(--text-color);
+  cursor: pointer;
+  display: inline-block;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.button-33:hover {
+  background: var(--green-grad);
+}
+
+.videoTag {
+  box-shadow: rgba(234, 0, 255, 0.2) 0 -25px 18px -14px inset,
+    rgba(146, 0, 231, 0.15) 0 1px 2px, rgba(2, 7, 255, 0.15) 0 2px 4px,
+    rgba(230, 87, 5, 0.15) 0 4px 8px, rgba(44, 187, 99, 0.15) 0 8px 16px,
+    rgba(44, 187, 99, 0.15) 0 16px 32px;
+}
+
+.HeroSection {
+  width: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  /* grid-template-columns: auto; */
+}
+
+.gradient {
+  background: var(--orange-pink);
+  background-clip: text;
+  color: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-head);
+  font-weight: 400;
+}
+.pt-5 {
+  padding-top: 5rem !important;
+}
+
+video {
+  width: 80%;
+}
+
+.grid {
+  display: grid;
+  padding: 1rem;
+}
+
+.place-center {
+  place-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.fr2 {
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+}
+.w-100 {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .fr2 {
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+}

@@ -13,18 +13,24 @@ import { ImCross } from 'react-icons/im';
 
 const Navbar = ({ Theme, setTheme }) => {
   const [ToggleNavbar, setToggleNavbar] = useState(true);
+  const [LoginToggle, setLoginToggle] = useState(false);
 
   return (
     <nav className="topnav">
+      {/* <div class=" "> */}
       <div class="navbar-logo">
         <Link href="/">
           <a className="navitem logo">Shubham Antiques</a>
         </Link>
       </div>
       <ul
-        className={'topnav-links hide-sm ' + (ToggleNavbar ? '' : 'openmenu')}
+        className={
+          'topnav-links hide-sm ' + (ToggleNavbar ? '' : 'openmenu Show')
+        }
       >
-        <li className="navitem">Shop</li>
+        <Link href="/shop">
+          <li className="navitem">Shop</li>
+        </Link>
         <li className="navitem">Login</li>
       </ul>
       <ul className="topnav-links">
@@ -36,7 +42,7 @@ const Navbar = ({ Theme, setTheme }) => {
         >
           {Theme ? <BsMoonStars /> : <BsSunFill />}
         </li>
-        <li className="navitem">
+        <li className="navitem" onClick={() => setLoginToggle(!LoginToggle)}>
           {Theme ? <BsEmojiSunglasses /> : <BsEmojiSunglassesFill />}
         </li>
         <li
@@ -46,6 +52,10 @@ const Navbar = ({ Theme, setTheme }) => {
           {ToggleNavbar ? <GiHamburgerMenu /> : <ImCross />}
         </li>
       </ul>
+      <div className={'loginContainer ' + (LoginToggle ? 'Show' : 'Hide')}>
+        LOGIN
+      </div>
+      {/* </div> */}
     </nav>
   );
 };

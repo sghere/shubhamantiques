@@ -1,17 +1,13 @@
 import React, { useState } from 'react';
+import HeroSection from './components/HeroSection';
 import Layout from './components/Layout';
 
 export default function Landing() {
-  const [Theme, setTheme] = useState(true);
-
   return (
     <>
-      <div className={'appcss ' + (Theme ? 'light-theme' : 'dark-theme')}>
-        <Layout Theme={Theme} setTheme={setTheme}>
-          Hellew
-          <button onClick={() => setTheme(!Theme)}>Change Theme</button>
-        </Layout>
-      </div>
+      <Layout>
+        <HeroSection />
+      </Layout>
     </>
   );
 }

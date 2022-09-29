@@ -72,7 +72,7 @@
   --gray6: #12181b;
   --nav-width: 4em;
   --font-body: 'sofia-pro', sans-serif;
-  --font-head: 'cubano', sans-serif;
+  --font-head: 'Anton', sans-serif;
   --font-code: 'attribute-mono', monospace;
   --font-size: 20px;
   --max-width-bp: 768px;
@@ -103,18 +103,26 @@
   --nav-border: 2px dashed var(--text-color);
   --card-border: 1px solid var(--nav-bg);
   --card-radius: 0.25em;
+
+  --box-shadow1: 0 8px 8px -4px lightblue;
+
   transition: all 0.3s ease;
 }
 
 .appcss {
   background: var(--background);
   color: var(--text-color);
-  display: flex;
-  flex-direction: column;
+  display: grid;
   font-family: var(--font-body);
   font-size: var(--font-size);
   margin: 0;
   min-height: 300vh;
+}
+
+.container {
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 main {

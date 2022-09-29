@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Footer from './Footer';
 import Navbar from './Navbar';
 
-const Layout = ({ children, Theme, setTheme }) => {
+const Layout = ({ children }) => {
+  const [Theme, setTheme] = useState(false);
+
   return (
     <>
-      <Navbar Theme={Theme} setTheme={setTheme} />
-      <main>{children}</main>
-      <Footer />
+      <div className={'appcss ' + (Theme ? 'light-theme' : 'dark-theme')}>
+        <Navbar Theme={Theme} setTheme={setTheme} />
+        <main className="flex justify-center container">{children}</main>
+        <Footer />
+      </div>
     </>
   );
 };
