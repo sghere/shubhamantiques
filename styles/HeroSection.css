@@ -1,5 +1,5 @@
 .videoTag {
-  box-shadow: var(--nav-shadow);
+  width: 100%;
 }
 
 .HeroSection {

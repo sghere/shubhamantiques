@@ -16,47 +16,68 @@ const Navbar = ({ Theme, setTheme }) => {
   const [LoginToggle, setLoginToggle] = useState(false);
 
   return (
-    <nav className="topnav">
-      {/* <div class=" "> */}
-      <div class="navbar-logo">
-        <Link href="/">
-          <a className="navitem logo">Shubham Antiques</a>
-        </Link>
-      </div>
-      <ul
-        className={
-          'topnav-links hide-sm ' + (ToggleNavbar ? '' : 'openmenu Show')
-        }
-      >
-        <Link href="/shop">
-          <li className="navitem">shop</li>
-        </Link>
-        <li className="navitem">login</li>
-      </ul>
-      <ul className="topnav-links">
-        <li
-          className="navitem"
-          onClick={() => {
-            setTheme(!Theme);
-          }}
+    <>
+      <nav className="topnav">
+        {/* <div class=" "> */}
+        <div class="navbar-logo">
+          <Link href="/">
+            <a className="navitem logo">Shubham Antiques</a>
+          </Link>
+        </div>
+        <ul
+          className={
+            'topnav-links hide-sm ' + (ToggleNavbar ? '' : 'openmenu Show')
+          }
         >
-          {Theme ? <BsMoonStars /> : <BsSunFill />}
-        </li>
-        <li className="navitem" onClick={() => setLoginToggle(!LoginToggle)}>
-          {Theme ? <BsEmojiSunglasses /> : <BsEmojiSunglassesFill />}
-        </li>
-        <li
-          className="navitem show-sm"
-          onClick={() => setToggleNavbar(!ToggleNavbar)}
-        >
-          {ToggleNavbar ? <GiHamburgerMenu /> : <ImCross />}
-        </li>
-      </ul>
+          <Link href="/shop">
+            <li className="navitem">shop</li>
+          </Link>
+          <li className="navitem">login</li>
+        </ul>
+        <ul className="topnav-links">
+          <li
+            className="navitem"
+            onClick={() => {
+              setTheme(!Theme);
+            }}
+          >
+            {Theme ? <BsMoonStars /> : <BsSunFill />}
+          </li>
+          <li className="navitem" onClick={() => setLoginToggle(!LoginToggle)}>
+            {Theme ? <BsEmojiSunglasses /> : <BsEmojiSunglassesFill />}
+          </li>
+          <li
+            className="navitem show-sm"
+            onClick={() => setToggleNavbar(!ToggleNavbar)}
+          >
+            {ToggleNavbar ? <GiHamburgerMenu /> : <ImCross />}
+          </li>
+        </ul>
+
+        {/* </div> */}
+      </nav>
       <div className={'loginContainer ' + (LoginToggle ? 'Show' : 'Hide')}>
-        LOGIN
+        <div class="loginCard">
+          <div className="loginHeader">
+            <h1>login</h1>
+            <div
+              className="loginCloseBtn"
+              onClick={() => setLoginToggle(!LoginToggle)}
+            >
+              <ImCross />
+            </div>
+          </div>
+          <div class="loginBody">
+            <input className="input" placeholder="username" type="text" />
+            <input className="input" placeholder="password" type="text" />
+            <button className="btn">enter the game</button>
+            <hr />
+            <button className="btn btn-white">with google</button>
+            <button className="btn btn-blue">with facebook</button>
+          </div>
+        </div>
       </div>
-      {/* </div> */}
-    </nav>
+    </>
   );
 };
 

@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 .dark-theme {
   --background: var(--gray6);
@@ -168,6 +169,19 @@ main {
   background-color: var(--background);
   box-shadow: 2px 5px;
 }
+
+.btn-white:hover {
+  color: black;
+  border-color: white;
+  background-color: white;
+}
+
+.btn-blue:hover {
+  color: black;
+  border-color: var(--blue-dark);
+  background-color: var(--blue-dark);
+}
+
 .btn:active {
   transform: scale(0.95);
   box-shadow: 0px 0px;
