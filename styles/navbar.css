@@ -4,12 +4,13 @@
 .topnav {
   display: flex;
   justify-content: space-between;
-  height: var(--nav-width);
+  height: var(--nav-height);
   width: 100%;
   position: fixed;
   transition: top 0.3s ease;
   background-color: var(--nav-bg);
   box-shadow: var(--nav-shadow);
+  z-index: 1;
 }
 
 .navitem {
@@ -54,7 +55,7 @@
 
     width: 100%;
     position: absolute;
-    top: var(--nav-width);
+    top: var(--nav-height);
     background-color: var(--nav-bg);
     transition: height 0.3s;
 
@@ -69,7 +70,7 @@
   height: 100vh;
   width: 100%;
   position: fixed;
-  /* top: var(--nav-width); */
+  /* top: var(--nav-height); */
   background-color: var(--overlay-bg);
   z-index: 1;
   backface-visibility: hidden;

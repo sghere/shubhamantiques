@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <div className="container">
       <hr />
-      <div class="FooterContainer pt-5 pb-5 text-center">
+      <div className="FooterContainer pt-5 pb-5 text-center">
         Footer
         <p>need help? email: gshubham8@gmail.com</p>
         <p>

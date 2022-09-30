@@ -72,7 +72,7 @@
   --gray4: #454e56;
   --gray5: #2a2e35;
   --gray6: #12181b;
-  --nav-width: 4em;
+  --nav-height: 4em;
   --font-body: 'sofia-pro', sans-serif;
   --font-head: 'Anton', sans-serif;
   --font-code: 'attribute-mono', monospace;
@@ -149,7 +149,7 @@
 }
 
 main {
-  margin-top: var(--nav-width);
+  margin-top: var(--nav-height);
 }
 
 /* ------------Button--------------- */
@@ -190,7 +190,7 @@ main {
 @media (max-width: 768px) {
   :root {
     --font-size: 15px;
-    --nav-width: 3em;
+    --nav-height: 3em;
   }
 }
 

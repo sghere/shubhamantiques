@@ -4,7 +4,7 @@ import { ImCross } from 'react-icons/im';
 const Modal = ({ children, ModalToggle, setModalToggle }) => {
   return (
     <div className={'modalContainer ' + (ModalToggle ? 'Show' : 'Hide')}>
-      <div class="modalCard">
+      <div className="modalCard">
         <div className="modalHeader">
           <h1>login</h1>
           <div
@@ -14,7 +14,7 @@ const Modal = ({ children, ModalToggle, setModalToggle }) => {
             <ImCross />
           </div>
         </div>
-        <div class="modalBody">{children}</div>
+        <div className="modalBody">{children}</div>
       </div>
     </div>
   );

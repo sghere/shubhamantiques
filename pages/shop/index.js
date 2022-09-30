@@ -1,11 +1,13 @@
 import React from 'react';
-import Layout from '../components/Layout';
+import Layout from '../../components/Layout';
 
 const index = () => {
   return (
     <>
       <Layout>
-        <kbd>Key </kbd>
+        <div className="ShopSection">
+          <h1>coming soon...</h1>
+        </div>
       </Layout>
     </>
   );

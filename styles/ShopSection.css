@@ -1,0 +1,5 @@
+.ShopSection {
+  display: grid;
+  min-height: calc(100vh - var(--nav-height));
+  place-items: center;
+}
