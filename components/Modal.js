@@ -7,10 +7,7 @@ const Modal = ({ children, ModalToggle, setModalToggle }) => {
       <div className="modalCard">
         <div className="modalHeader">
           <h1>login</h1>
-          <div
-            className="modalCloseBtn"
-            onClick={() => setModalToggle(!ModalToggle)}
-          >
+          <div className="modalCloseBtn" onClick={setModalToggle}>
             <ImCross />
           </div>
         </div>

@@ -13,14 +13,13 @@ import { ImCross } from 'react-icons/im';
 import Modal from './Modal';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { toggle } from '../redux/themeSlice';
+import { toggleTheme, toggleLoginForm } from '../redux/togglerSlice';
 
 const Navbar = () => {
-  const [ToggleNavbar, setToggleNavbar] = useState(true);
-  const [LoginToggle, setLoginToggle] = useState(false);
-
-  const Theme = useSelector((state) => state.theme.value);
   const dispatch = useDispatch();
+  const [ToggleNavbar, setToggleNavbar] = useState(true);
+  const LoginForm = useSelector((state) => state.toggler.LoginForm);
+  const Theme = useSelector((state) => state.toggler.Theme);
 
   return (
     <>
@@ -41,10 +40,10 @@ const Navbar = () => {
           </Link>
         </ul>
         <ul className="topnav-links">
-          <li className="navitem" onClick={() => dispatch(toggle())}>
+          <li className="navitem" onClick={() => dispatch(toggleTheme())}>
             {Theme ? <BsMoonStars /> : <BsSunFill />}
           </li>
-          <li className="navitem" onClick={() => setLoginToggle(!LoginToggle)}>
+          <li className="navitem" onClick={() => dispatch(toggleLoginForm())}>
             {Theme ? <BsEmojiSunglasses /> : <BsEmojiSunglassesFill />}
           </li>
           <li
@@ -57,7 +56,10 @@ const Navbar = () => {
 
         {/* </div> */}
       </nav>
-      <Modal ModalToggle={LoginToggle} setModalToggle={setLoginToggle}>
+      <Modal
+        ModalToggle={LoginForm}
+        setModalToggle={() => dispatch(toggleLoginForm())}
+      >
         <input className="input" placeholder="username" type="text" />
         <input className="input" placeholder="password" type="text" />
         <button className="btn">enter the game</button>

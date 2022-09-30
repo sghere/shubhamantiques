@@ -4,11 +4,11 @@ import Navbar from './Navbar';
 import { useSelector } from 'react-redux';
 
 const Layout = ({ children }) => {
-  const theme = useSelector((state) => state.theme.value);
+  const Theme = useSelector((state) => state.toggler.Theme);
 
   return (
     <>
-      <div className={'appcss ' + (theme ? 'light-theme' : 'dark-theme')}>
+      <div className={'appcss ' + (Theme ? 'light-theme' : 'dark-theme')}>
         <Navbar />
         <main className="flex justify-center container">{children}</main>
         <Footer />

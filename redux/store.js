@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
-import themeReducer from './themeSlice';
+import togglerReducer from './togglerSlice';
 
 export const store = configureStore({
   reducer: {
-    theme: themeReducer,
+    toggler: togglerReducer,
   },
 });

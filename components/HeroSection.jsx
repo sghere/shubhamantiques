@@ -1,6 +1,12 @@
+import { useRouter } from 'next/router';
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { toggleLoginForm } from '../redux/togglerSlice';
 
 const HeroSection = () => {
+  const dispatch = useDispatch();
+  const router = useRouter();
+
   const LandingSection = ({
     id,
     text1,
@@ -8,6 +14,7 @@ const HeroSection = () => {
     text2,
     blinktext,
     loginToggle,
+    link,
   }) => {
     return (
       <div id={id} className="HeroSection2">
@@ -16,7 +23,11 @@ const HeroSection = () => {
         </h1>
         <h4
           className="blinkAnim pt-2 landingLinks"
-          // onClick={loginToggle ? setLoginToggle(true) : void 0}
+          onClick={
+            loginToggle
+              ? () => dispatch(toggleLoginForm())
+              : () => router.push('/#' + link)
+          }
         >
           {blinktext}
         </h4>
@@ -51,6 +62,7 @@ const HeroSection = () => {
           htext="awaiting"
           text2="to meet you"
           blinktext="lets explore...🥰"
+          link="section3"
         />
         <LandingSection
           id="section3"
@@ -58,9 +70,10 @@ const HeroSection = () => {
           htext="ones"
           text2=" "
           blinktext="lets goo...🤯"
+          link="section4"
         />
         <LandingSection
-          id="section3"
+          id="section4"
           text1="your  "
           htext="children’s children"
           text2=" will cherish it more."
