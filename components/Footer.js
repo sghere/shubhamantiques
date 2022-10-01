@@ -1,8 +1,9 @@
+import Link from 'next/link';
 import React from 'react';
 import {
   AiOutlineInstagram,
   AiOutlineFacebook,
-  AiOutlineTwitter,
+  AiOutlineWhatsApp,
   AiOutlineYoutube,
 } from 'react-icons/ai';
 
@@ -13,13 +14,38 @@ const Footer = () => {
       <div className="FooterContainer pt-5 pb-5 text-center">
         <p>
           need help? email:{' '}
-          <a href="mailto:gshubham8@gmail.com">gshubham8@gmail.com</a>
+          <a href="mailto:info@shubhamantiques.shop">
+            info@shubhamantiques.shop
+          </a>
         </p>
         <p className="FooterSocialLinks">
-          <AiOutlineInstagram className="FooterSocialLink" />
-          <AiOutlineFacebook className="FooterSocialLink" />
-          <AiOutlineTwitter className="FooterSocialLink" />
-          <AiOutlineYoutube className="FooterSocialLink" />
+          <a
+            className="FooterSocialLink"
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.instagram.com/shubhamantiques"
+          >
+            <AiOutlineInstagram />
+          </a>
+          <a
+            className="FooterSocialLink"
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.facebook.com/maheshgaikwad321/"
+          >
+            <AiOutlineFacebook className="FooterSocialLink" />
+          </a>
+          <a
+            className="FooterSocialLink"
+            target="_blank"
+            rel="noreferrer"
+            href="https://api.whatsapp.com/send/?phone=%2B918655301910&text=Hi, Checked your Shubham Antiques Website."
+          >
+            <AiOutlineWhatsApp className="FooterSocialLink" />
+          </a>
+          {/* <Link>
+            <AiOutlineYoutube className="FooterSocialLink" />
+          </Link> */}
         </p>
         <small className="pt-1">Copyright © 2022 Shubham Gaikwad</small>
       </div>
