@@ -1,0 +1,59 @@
+.Section {
+  display: grid;
+  min-height: calc(100vh - var(--nav-height));
+  place-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.CareerSection {
+  align-content: baseline;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+.p-2 {
+  padding: 2rem;
+}
+.p-3 {
+  padding: 3rem;
+}
+.p-4 {
+  padding: 4rem;
+}
+.p-5 {
+  padding: 5rem;
+}
+
+.CareerCard {
+  background: var(--card-bg);
+  padding: 20px;
+  width: auto;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+.CareerCard .CardBody {
+  padding: 2rem 1rem;
+}
+
+.CareerCard:hover {
+  cursor: pointer;
+  box-shadow: var(--card-shadow);
+}
+
+.HeadingBorderHr {
+  width: 50px;
+}
+
+@media (max-width: 768px) {
+  .CareerCard {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  .CareerCard {
+    padding: 10px;
+  }
+}

@@ -97,7 +97,7 @@
   --background-opacity: #12181b95;
   --text-color: var(--gray2);
   --highlight-light-color: white;
-  --highlight-dark-color: var(--gray4);
+  --highlight-dark-color: var(--gray6);
   --h-color: var(--highlight-light-color);
   --nav-shadow: 4px 0 10px -3px #010101;
   --nav-shadow-bottom: 0px 15px 10px -20px #010101;
@@ -201,6 +201,10 @@ main {
   font-size: 12px;
   width: 100%;
   min-height: 300px;
+}
+
+.FooterSocialLinks > * {
+  transition: 0.3s;
 }
 
 .FooterSocialLinks {

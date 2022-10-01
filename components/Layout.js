@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
     <>
       <div className={'appcss ' + (Theme ? 'light-theme' : 'dark-theme')}>
         <Navbar />
-        <main className="flex justify-center container">{children}</main>
+        <main className="container">{children}</main>
         <Footer />
       </div>
     </>

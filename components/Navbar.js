@@ -38,6 +38,9 @@ const Navbar = () => {
           <Link href="/shop">
             <li className="navitem">shop</li>
           </Link>
+          <Link href="/careers">
+            <li className="navitem">careers</li>
+          </Link>
         </ul>
         <ul className="topnav-links">
           <li className="navitem" onClick={() => dispatch(toggleTheme())}>
