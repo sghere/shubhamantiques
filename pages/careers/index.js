@@ -36,7 +36,7 @@ const index = () => {
             <CareerCard
               heading={'Next Developer '}
               position="Internship"
-              description="opening for ReactJs Intern"
+              description="opening for NextJs Intern"
               buttonLink="https://api.whatsapp.com/send/?phone=%2B918655301910&text=Hi, Application for NextJs Developer. From- Shubham Antiques Website"
             />
             <CareerCard
