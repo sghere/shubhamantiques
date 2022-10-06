@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Script from 'next/script';
 import React, { useState } from 'react';
 import HeroSection from '../components/HeroSection';
 import Layout from '../components/Layout';
@@ -28,7 +29,10 @@ export default function Landing() {
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff"></meta>
-        <meta name="title" content="Shubham Antiques Shop (Indian Pawn Shop)" />
+        <meta
+          name="title"
+          content="Buy Antiques for your Loved Ones | Shubham Antiques (Indian Pawn Stars)"
+        />
         <meta
           name="description"
           content="Shubham Antiques Shop is a buyer ad seller of all Antique Items.We are one of the leading businesses in the Antique Collectible Dealers."
@@ -42,6 +46,16 @@ export default function Landing() {
         <meta name="language" content="English" />
         <meta name="author" content="Shubham Mahesh Gaikwad" />
       </Head>
+      <Script
+        id="google-inline"
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-JBFLYZXPB0"
+      ></Script>
+      <Script id="google-inline2">
+        window.dataLayer = window.dataLayer || []; function gtag() G-JBFLYZXPB0
+        &apos); dataLayer.push(arguments) gtag( &apos js &apos, new Date());
+        gtag( &apos config &apos, &apos G-JBFLYZXPB0 &apos);
+      </Script>
       <Layout>
         <HeroSection />
       </Layout>

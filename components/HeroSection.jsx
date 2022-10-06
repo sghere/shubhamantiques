@@ -45,8 +45,7 @@ const HeroSection = () => {
   return (
     <>
       <Head>
-        <title>Shubham Antiques</title>
-        <meta property="og:title" content="My page title" key="title" />
+        <title>Buy Antiques for your Loved Ones | Shubham Antiques</title>
       </Head>
 
       <div id="section1" className="HeroSection">
