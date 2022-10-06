@@ -45,7 +45,7 @@ const HeroSection = () => {
   return (
     <>
       <Head>
-        <title>Buy Antiques for your Loved Ones | Shubham Antiques</title>
+        <title>Find and Buy Antiques | Shubham Antiques</title>
       </Head>
 
       <div id="section1" className="HeroSection">
