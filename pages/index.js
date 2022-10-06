@@ -43,7 +43,20 @@ export default function Landing() {
         <meta name="language" content="English" />
         <meta name="author" content="Shubham Mahesh Gaikwad" />
       </Head>
+      {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-JBFLYZXPB0"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
 
+          gtag('config', 'G-JBFLYZXPB0');
+        `}
+      </Script>
       <Layout>
         <HeroSection />
       </Layout>

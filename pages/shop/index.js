@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Script from 'next/script';
 import React from 'react';
 import Layout from '../../components/Layout';
 
@@ -23,6 +24,19 @@ const index = () => {
         <meta name="language" content="English" />
         <meta name="author" content="Shubham Mahesh Gaikwad" />
       </Head>
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-JBFLYZXPB0"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-JBFLYZXPB0');
+        `}
+      </Script>
       <Layout>
         <div className="Section">
           <h1>coming soon...</h1>
