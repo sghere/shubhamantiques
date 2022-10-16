@@ -28,16 +28,18 @@ const HeroSection = () => {
         <h1>
           {text1} <span className="gradient"> {htext}</span> {text2}
         </h1>
+        <Link href={"#" + link} scroll={false}>  
         <h4
           className="blinkAnim pt-2 landingLinks"
           onClick={
             loginToggle
               ? () => dispatch(toggleLoginForm())
-              : () => router.push('/#' + link)
+              : null
           }
         >
           {blinktext}
         </h4>
+        </Link>
       </div>
     );
   };

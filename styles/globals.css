@@ -134,6 +134,10 @@
   background-color: var(--primary-color);
 }
 
+html,body{
+  scroll-behavior: smooth;
+}
+
 .appcss {
   background: var(--background);
   color: var(--text-color);
