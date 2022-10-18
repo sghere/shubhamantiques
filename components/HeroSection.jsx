@@ -57,7 +57,7 @@ const HeroSection = () => {
               decorate yourself with
               <span className="gradient"> timeless</span> things
               <br />
-              <button className="btn">start shopping</button>
+              <Link href="/shop" scroll={false}><button className="btn">start shopping</button></Link>
             </h1>
           </div>
           <div className="grid place-center">
@@ -76,7 +76,7 @@ const HeroSection = () => {
       </div>
 
       <div className="grid place-center landingScroll">
-        <Link href="#section2">
+        <Link href="#section2" scroll={false}>
           <p className="text-center">
             Scroll <br /> <CgScrollV />
           </p>

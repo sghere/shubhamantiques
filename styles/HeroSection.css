@@ -35,6 +35,10 @@ h6 {
   font-family: var(--font-head) !important;
   font-weight: 400 !important;
 }
+
+h1{
+  user-select: none;
+}
 .pt-1 {
   padding-top: 1rem;
 }
