@@ -1,6 +1,6 @@
 .Section {
   display: grid;
-  min-height: calc(100vh - var(--nav-height));
+  min-height: var(--first-container-height);
   place-items: center;
   justify-content: space-around;
   gap: 2rem;

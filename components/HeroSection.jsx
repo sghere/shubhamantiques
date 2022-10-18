@@ -1,15 +1,13 @@
-import { useRouter } from 'next/router';
-import React from 'react';
-import { useDispatch } from 'react-redux';
-import { toggleLoginForm } from '../redux/togglerSlice';
+import React from "react";
+import { useDispatch } from "react-redux";
+import { toggleLoginForm } from "../redux/togglerSlice";
 
-import { CgScrollV } from 'react-icons/cg';
-import Link from 'next/link';
-import Head from 'next/head';
+import { CgScrollV } from "react-icons/cg";
+import Link from "next/link";
+import Head from "next/head";
 
 const HeroSection = () => {
   const dispatch = useDispatch();
-  const router = useRouter();
 
   const LandingSection = ({
     id,
@@ -28,17 +26,13 @@ const HeroSection = () => {
         <h1>
           {text1} <span className="gradient"> {htext}</span> {text2}
         </h1>
-        <Link href={"#" + link} scroll={false}>  
-        <h4
-          className="blinkAnim pt-2 landingLinks"
-          onClick={
-            loginToggle
-              ? () => dispatch(toggleLoginForm())
-              : null
-          }
-        >
-          {blinktext}
-        </h4>
+        <Link href={"#" + link} scroll={false}>
+          <h4
+            className="blinkAnim pt-2 landingLinks"
+            onClick={loginToggle ? () => dispatch(toggleLoginForm()) : null}
+          >
+            {blinktext}
+          </h4>
         </Link>
       </div>
     );
@@ -57,7 +51,9 @@ const HeroSection = () => {
               decorate yourself with
               <span className="gradient"> timeless</span> things
               <br />
-              <Link href="/shop" scroll={false}><button className="btn">start shopping</button></Link>
+              <Link href="/shop" scroll={false}>
+                <button className="btn">start shopping</button>
+              </Link>
             </h1>
           </div>
           <div className="grid place-center">

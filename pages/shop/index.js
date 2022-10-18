@@ -1,7 +1,8 @@
-import Head from 'next/head';
-import Script from 'next/script';
-import React from 'react';
-import Layout from '../../components/Layout';
+import Head from "next/head";
+import Script from "next/script";
+import React from "react";
+import Layout from "../../components/Layout";
+import ProductsContainer from "../../components/ProductsContainer";
 
 const index = () => {
   return (
@@ -38,8 +39,12 @@ const index = () => {
         `}
       </Script>
       <Layout>
-        <div className="Section">
-          <h1>coming soon...</h1>
+        <div className="Section p-3">
+          <h1>
+            Products
+            <hr className="HeadingBorderHr" />
+          </h1>
+          <ProductsContainer />
         </div>
       </Layout>
     </>
