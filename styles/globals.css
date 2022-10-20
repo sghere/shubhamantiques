@@ -39,7 +39,7 @@
   --h-border: 2px dashed var(--gray1);
   --nav-border: 2px dashed var(--text-color);
   --card-border: 1px solid var(--gray1);
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 
 :root {
@@ -74,9 +74,9 @@
   --gray6: #12181b;
   --nav-height: 4em;
   --first-container-height: calc(100vh - var(--nav-height));
-  --font-body: "sofia-pro", sans-serif;
-  --font-head: "Anton", sans-serif;
-  --font-code: "attribute-mono", monospace;
+  --font-body: 'sofia-pro', sans-serif;
+  --font-head: 'Anton', sans-serif;
+  --font-code: 'attribute-mono', monospace;
   --font-size: 20px;
   --max-width-bp: 768px;
   --orange-pink: linear-gradient(
@@ -231,46 +231,30 @@ a {
   color: var(--primary-color);
 }
 
-/* CARD */
-
-.Card {
-  background: var(--card-bg);
-  /* padding: 20px; */
-  /* width: 12%; */
-
-  transition: 0.3s;
-  border-radius: 5px;
-  max-height: 500px;
-
-  display: grid;
-}
-.CardBody {
-  padding: 20px;
-  overflow: scroll;
-}
-.Card:hover {
-  cursor: pointer;
-  box-shadow: var(--card-shadow);
-}
-
 /* Products Container */
 .ProductsContainer {
   display: grid;
   width: 100%;
   grid-gap: 1rem;
-
-  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+  grid-template-columns: repeat(5, minmax(100px, 1fr));
   /* grid-auto-flow: column; */
 }
 
 @media (max-width: 1024px) {
   .ProductsContainer {
-    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
   }
 }
 
 @media (max-width: 768px) {
   .ProductsContainer {
-    grid-template-columns: repeat(1, minmax(250px, 1fr));
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+  }
+}
+
+@media (max-width: 500px) {
+  .ProductsContainer {
+    grid-template-columns: repeat(1, minmax(100px, 1fr));
   }
 }

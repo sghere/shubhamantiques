@@ -1,0 +1,29 @@
+/* CARD */
+
+.Card {
+  background: var(--card-bg);
+  border-radius: 5px;
+  max-height: 500px;
+  display: grid;
+}
+
+.Card:hover {
+  cursor: pointer;
+  box-shadow: var(--card-shadow);
+}
+.CardBody {
+  padding: 1.25rem;
+  overflow-y: auto;
+  font-size: 0.7rem;
+  display: grid;
+  gap: 10px;
+}
+.CardHeader {
+  display: flex;
+  justify-content: space-between;
+  color: var(--h-color);
+}
+
+.ProductPrice {
+  color: red;
+}
