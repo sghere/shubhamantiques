@@ -2,8 +2,8 @@
   display: grid;
   min-height: var(--first-container-height);
   place-items: center;
-  justify-content: space-around;
   gap: 2rem;
+  width: 100%;
 }
 
 .CareerSection {

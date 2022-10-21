@@ -1,10 +1,48 @@
 import Head from 'next/head';
+import Image from 'next/image';
 import Script from 'next/script';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Layout from '../../components/Layout';
-import ProductsContainer from '../../components/ProductsContainer';
+import styles from '../../components/ProductCard.module.css';
+import img from '../../public/images/abc.jpg';
+import ProductCard from '../../components/ProductCard';
 
-const index = () => {
+import { useRouter } from 'next/router';
+
+const ProductPage = () => {
+  const router = useRouter();
+  const { id } = router.query;
+  const [Data, setData] = useState([]);
+  const [IsLoading, setIsLoading] = useState(false);
+  const [Product, setProduct] = useState({});
+  useEffect(() => {
+    setIsLoading(true);
+    fetch('https://dummyjson.com/products')
+      .then((res) => res.json())
+      .then((result) => {
+        setIsLoading(false);
+        setData(result.products);
+      });
+
+    fetch('https://dummyjson.com/products/' + id)
+      .then((res) => res.json())
+      .then((result) => {
+        setIsLoading(false);
+        setProduct(result);
+      });
+  }, [id]);
+
+  const DisplayProducts = Data.map((e) => (
+    <ProductCard
+      key={e.id}
+      id={e.id}
+      img={img}
+      ProductName={e.title}
+      ProductDescription={e.description}
+      ProductPrice={'$' + e.price}
+    />
+  ));
+
   return (
     <>
       <Head>
@@ -40,15 +78,34 @@ const index = () => {
       </Script>
       <Layout>
         <div className="Section p-3">
-          <h1>
-            Products
-            <hr className="HeadingBorderHr" />
-          </h1>
-          <ProductsContainer />
+          {IsLoading ? (
+            'Loading...'
+          ) : (
+            <>
+              <div class={styles.ProductContainer}>
+                <div class={styles.ProductLeft}>
+                  <Image src={img} className={styles.ProductImage} />
+                </div>
+                <div class={styles.ProductRight}>
+                  <h2 className={styles.Heading}>{Product.title}</h2>
+                  <hr />
+                  <h3 className={styles.ProductPrice}>{Product.price}</h3>
+                  <p>{Product.description}</p>
+                </div>
+              </div>
+              <div class={styles.MoreOptions}>
+                <h2>More options</h2>
+                <hr />
+                <div class={styles.MoreProductsContainer}>
+                  {DisplayProducts}
+                </div>
+              </div>
+            </>
+          )}
         </div>
       </Layout>
     </>
   );
 };
 
-export default index;
+export default ProductPage;

@@ -7,21 +7,20 @@ const ProductsContainer = () => {
   const [IsLoading, setIsLoading] = useState(false);
   useEffect(() => {
     setIsLoading(true);
-    setTimeout(() => {
-      fetch('https://dummyjson.com/products')
-        .then((res) => res.json())
-        .then((result) => {
-          setIsLoading(false);
-          console.log(result.products);
-          setData(result.products);
-        });
+    fetch('https://dummyjson.com/products')
+      .then((res) => res.json())
+      .then((result) => {
+        setIsLoading(false);
+        console.log(result.products);
+        setData(result.products);
+      });
 
-      console.log('5 sec hua');
-    }, 15000);
+    console.log('5 sec hua');
   }, []);
 
   const DisplayProducts = Data.map((e) => (
     <ProductCard
+      key={e.id}
       id={e.id}
       img={img}
       ProductName={e.title}

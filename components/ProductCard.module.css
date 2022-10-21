@@ -2,8 +2,8 @@
 
 .Card {
   background: var(--card-bg);
-  border-radius: 5px;
-  max-height: 500px;
+  border-radius: 0.3rem;
+  max-height: 30em;
   display: grid;
 }
 
@@ -16,14 +16,50 @@
   overflow-y: auto;
   font-size: 0.7rem;
   display: grid;
-  gap: 10px;
+  gap: 1rem;
 }
 .CardHeader {
   display: flex;
   justify-content: space-between;
   color: var(--h-color);
+  gap: 0.5rem;
 }
 
 .ProductPrice {
   color: red;
+}
+
+.ProductImage {
+  border-radius: 0.3rem;
+}
+
+.ProductContainer {
+  /* background: var(--card-bg); */
+  border-radius: 0.3rem;
+
+  padding: 1rem;
+  gap: 1rem;
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ProductContainer > * {
+  flex: 1 1 20rem;
+}
+
+.Heading {
+  color: var(--h-color);
+}
+
+.MoreProductsContainer {
+  display: flex;
+  overflow-x: auto;
+  max-width: 70vw;
+  gap: 1rem;
+  padding: 1rem;
+}
+.MoreProductsContainer > * {
+  flex: 1 0 15rem;
 }
