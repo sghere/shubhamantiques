@@ -1,0 +1,70 @@
+.BlogWrapper {
+  max-width: 800px;
+  /* text-align: center; */
+}
+.videoTag {
+  width: 100%;
+  padding: 1rem;
+}
+.BlogText {
+  padding-top: 4rem;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 600;
+  padding-bottom: 4rem;
+}
+.ImpText {
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.BlogHeadings {
+  font-size: 2rem;
+}
+
+.fullscreenf {
+  min-height: var(--first-container-height);
+  display: grid;
+  place-items: center;
+}
+.fullscreen {
+  padding-top: calc(var(--nav-height) + 30px);
+  min-height: var(--first-container-height);
+  display: grid;
+  place-items: center;
+}
+
+.MeetIntro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.ThinText {
+  font-family: var(--font-thin);
+  font-size: 1rem;
+}
+.ThickText {
+  font-family: var(--font-thin);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.Left {
+  display: grid;
+  gap: 1rem;
+  height: fit-content;
+}
+.Right {
+  max-height: 35rem;
+}
+.LargeText {
+  font-size: 4rem;
+}
+.Intro {
+  height: var(--nav-height);
+}
+
+@media only screen and (max-width: 600px) {
+  .MeetIntro {
+    grid-template-columns: 1fr;
+  }
+}

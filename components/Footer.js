@@ -5,16 +5,18 @@ import {
   AiOutlineFacebook,
   AiOutlineWhatsApp,
   AiOutlineYoutube,
+  AiOutlinePhone,
 } from 'react-icons/ai';
+import { BsPhone } from 'react-icons/bs';
 
 const Footer = () => {
-
   const [VisitCount, setVisitCount] = useState(0);
 
   useEffect(() => {
-    fetch("https://api.countapi.xyz/hit/shubhamantiques.shop/visits").then(res=>res.json()).then(result=>setVisitCount(result.value));  
-  }, [])
-  
+    fetch('https://api.countapi.xyz/hit/shubhamantiques.shop/visits')
+      .then((res) => res.json())
+      .then((result) => setVisitCount(result.value));
+  }, []);
 
   return (
     <div className="container">
@@ -27,6 +29,14 @@ const Footer = () => {
           </a>
         </p>
         <p className="FooterSocialLinks">
+          <a
+            className="FooterSocialLink"
+            target="_blank"
+            rel="noreferrer"
+            href="tel:+918655301910"
+          >
+            <BsPhone />
+          </a>
           <a
             className="FooterSocialLink"
             target="_blank"
@@ -56,7 +66,8 @@ const Footer = () => {
           </Link> */}
         </p>
         <small className="pt-1">Copyright © 2022 Shubham Gaikwad</small>
-        <br /><br />
+        <br />
+        <br />
         <p>Visit Count: {VisitCount}</p>
       </div>
     </div>

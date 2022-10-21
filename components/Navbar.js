@@ -35,6 +35,9 @@ const Navbar = () => {
             'topnav-links hide-sm ' + (ToggleNavbar ? '' : 'openmenu Show')
           }
         >
+          <Link href="/about">
+            <li className="navitem">about</li>
+          </Link>
           <Link href="/shop">
             <li className="navitem">shop</li>
           </Link>

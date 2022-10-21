@@ -44,6 +44,10 @@ const index = () => {
             Products
             <hr className="HeadingBorderHr" />
           </h2>
+          <p>
+            Products added here are for testing purposes only...will be adding
+            real products soon.
+          </p>
           <ProductsContainer />
         </div>
       </Layout>

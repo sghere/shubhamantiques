@@ -26,6 +26,11 @@
   padding: 5rem;
 }
 
+.px-3 {
+  padding: 0 3rem;
+  padding-bottom: 5rem;
+}
+
 .CareerCard {
   background: var(--card-bg);
   padding: 20px;

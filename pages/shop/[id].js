@@ -47,7 +47,7 @@ const ProductPage = () => {
   return (
     <>
       <Head>
-        <title>Shop | Shubham Antiques</title>
+        <title>{Product.title} | Shubham Antiques</title>
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff"></meta>
 
