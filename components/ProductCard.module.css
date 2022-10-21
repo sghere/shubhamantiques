@@ -5,11 +5,13 @@
   border-radius: 0.3rem;
   max-height: 30em;
   display: grid;
+  transition: 0.5s;
 }
 
 .Card:hover {
   cursor: pointer;
   box-shadow: var(--card-shadow);
+  transform: scale(1.05);
 }
 .CardBody {
   padding: 1.25rem;
@@ -23,6 +25,11 @@
   justify-content: space-between;
   color: var(--h-color);
   gap: 0.5rem;
+}
+
+.ProductRight {
+  display: grid;
+  gap: 1rem;
 }
 
 .ProductPrice {
@@ -62,4 +69,14 @@
 }
 .MoreProductsContainer > * {
   flex: 1 0 15rem;
+}
+
+.Wrapper {
+  display: grid;
+  height: fit-content;
+  gap: 1rem;
+}
+
+.ProductDesc {
+  max-width: 75ch;
 }

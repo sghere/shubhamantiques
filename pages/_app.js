@@ -2,9 +2,9 @@ import '../styles/globals.css';
 import '../styles/navbar.css';
 import '../styles/HeroSection.css';
 import '../styles/Section.css';
+
 import { Provider } from 'react-redux';
 import { store } from '../redux/store';
-
 
 function MyApp({ Component, pageProps }) {
   return (

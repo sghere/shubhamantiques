@@ -10,38 +10,39 @@ import ProductCard from '../../components/ProductCard';
 import { useRouter } from 'next/router';
 
 const ProductPage = () => {
-  const router = useRouter();
-  const { id } = router.query;
   const [Data, setData] = useState([]);
-  const [IsLoading, setIsLoading] = useState(false);
+  const [IsLoading, setIsLoading] = useState(true);
   const [Product, setProduct] = useState({});
+  const router = useRouter();
   useEffect(() => {
-    setIsLoading(true);
-    fetch('https://dummyjson.com/products')
-      .then((res) => res.json())
-      .then((result) => {
-        setIsLoading(false);
-        setData(result.products);
-      });
+    // fetch('https://dummyjson.com/products')
+    //   .then((res) => res.json())
+    //   .then((result) => {
+    //     setIsLoading(false);
+    //     setData(result.products);
+    //   });
+    if (router && router.query.id) {
+      console.log(router);
+      const id = router.query.id;
+      fetch('https://dummyjson.com/products/' + id)
+        .then((res) => res.json())
+        .then((result) => {
+          setIsLoading(false);
+          setProduct(result);
+        });
+    }
+  }, [router]);
 
-    fetch('https://dummyjson.com/products/' + id)
-      .then((res) => res.json())
-      .then((result) => {
-        setIsLoading(false);
-        setProduct(result);
-      });
-  }, [id]);
-
-  const DisplayProducts = Data.map((e) => (
-    <ProductCard
-      key={e.id}
-      id={e.id}
-      img={img}
-      ProductName={e.title}
-      ProductDescription={e.description}
-      ProductPrice={'$' + e.price}
-    />
-  ));
+  // const DisplayProducts = Data.map((e) => (
+  //   <ProductCard
+  //     key={e.id}
+  //     id={e.id}
+  //     img={img}
+  //     ProductName={e.title}
+  //     ProductDescription={e.description}
+  //     ProductPrice={'$' + e.price}
+  //   />
+  // ));
 
   return (
     <>
@@ -79,27 +80,32 @@ const ProductPage = () => {
       <Layout>
         <div className="Section p-3">
           {IsLoading ? (
-            'Loading...'
+            <div className="spinner"></div>
           ) : (
             <>
-              <div class={styles.ProductContainer}>
-                <div class={styles.ProductLeft}>
+              <div className={styles.ProductContainer}>
+                <div className={styles.ProductLeft}>
                   <Image src={img} className={styles.ProductImage} />
                 </div>
-                <div class={styles.ProductRight}>
-                  <h2 className={styles.Heading}>{Product.title}</h2>
-                  <hr />
-                  <h3 className={styles.ProductPrice}>{Product.price}</h3>
-                  <p>{Product.description}</p>
+                <div className={styles.ProductRight}>
+                  <div className={styles.Wrapper}>
+                    <h2 className={styles.Heading}>
+                      {Product.title}
+                      <hr />
+                    </h2>
+                    <h3 className={styles.ProductPrice}>${Product.price}</h3>
+                    <p className={styles.ProductDesc}>{Product.description}</p>
+                    <button className="btn btn-success">buy now</button>
+                  </div>
                 </div>
               </div>
-              <div class={styles.MoreOptions}>
+              {/* <div className={styles.MoreOptions}>
                 <h2>More options</h2>
                 <hr />
-                <div class={styles.MoreProductsContainer}>
+                <div className={styles.MoreProductsContainer}>
                   {DisplayProducts}
                 </div>
-              </div>
+              </div> */}
             </>
           )}
         </div>

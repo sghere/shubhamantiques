@@ -9,6 +9,7 @@ const ProductCard = ({
   ProductName,
   ProductDescription,
   ProductPrice,
+  IsLoading,
 }) => {
   return (
     <Link href={'/shop/' + id}>
