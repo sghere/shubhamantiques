@@ -36,7 +36,7 @@ const About = () => {
             </p>
           </div> */}
           <div className={styles.fullscreenf}>
-            <div>
+            <div className="FadeIn">
               <p>Meet,</p>
               <Link href="#Intro" scroll={false}>
                 <h1>Mahesh Baban Gaikwad</h1>

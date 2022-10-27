@@ -22,7 +22,6 @@ const ProductPage = () => {
     //     setData(result.products);
     //   });
     if (router && router.query.id) {
-      console.log(router);
       const id = router.query.id;
       fetch('https://dummyjson.com/products/' + id)
         .then((res) => res.json())
@@ -83,7 +82,7 @@ const ProductPage = () => {
             <div className="spinner"></div>
           ) : (
             <>
-              <div className={styles.ProductContainer}>
+              <div className={styles.ProductContainer + ' FadeIn'}>
                 <div className={styles.ProductLeft}>
                   <Image src={img} className={styles.ProductImage} />
                 </div>

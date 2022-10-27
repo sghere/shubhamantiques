@@ -10,7 +10,6 @@ const ProductsContainer = () => {
     fetch('https://dummyjson.com/products')
       .then((res) => res.json())
       .then((result) => {
-        console.log(result.products);
         setData(result.products);
         setIsLoading(false);
       });
@@ -18,6 +17,7 @@ const ProductsContainer = () => {
 
   const DisplayProducts = Data.map((e) => (
     <ProductCard
+      className="FadeIn"
       key={e.id}
       id={e.id}
       img={img}
@@ -27,7 +27,15 @@ const ProductsContainer = () => {
     />
   ));
 
-  return <div className="ProductsContainer">{DisplayProducts}</div>;
+  return (
+    <>
+      {IsLoading ? (
+        <div className="spinner"></div>
+      ) : (
+        <div className="ProductsContainer">{DisplayProducts}</div>
+      )}
+    </>
+  );
 };
 
 export default ProductsContainer;

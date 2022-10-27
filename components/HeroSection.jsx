@@ -44,9 +44,9 @@ const HeroSection = () => {
         <title>Find and Buy Antiques | Shubham Antiques</title>
       </Head>
 
-      <div id="section1" className="HeroSection">
-        <div className="grid fr2">
-          <div className="grid place-center">
+      <div id="section1" className="HeroSection FadeIn">
+        <div className="grid fr2 ">
+          <div className="grid place-center ">
             <h1 className="text-center">
               decorate yourself with
               <span className="gradient"> timeless</span> things
@@ -62,7 +62,7 @@ const HeroSection = () => {
               muted
               loop
               className="videoTag"
-              poster="video_poster.JPG"
+              // poster="video_poster.JPG"
             >
               <source src="video1.mp4#t=0.1" type="video/mp4" />
               Your browser does not support the video tag.
@@ -74,7 +74,7 @@ const HeroSection = () => {
       <div className="grid place-center landingScroll">
         <Link href="#section2" scroll={false}>
           <p className="text-center">
-            Scroll <br /> <CgScrollV />
+            <br /> <CgScrollV />
           </p>
         </Link>
       </div>

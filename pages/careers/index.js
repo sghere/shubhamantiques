@@ -55,11 +55,11 @@ const index = () => {
         `}
       </Script>
       <Layout>
-        <div className="Section p-3 CareerSection">
-          <h1>
+        <div className="Section p-3 CareerSection FadeIn">
+          <h2>
             careers
             <hr className="HeadingBorderHr" />
-          </h1>
+          </h2>
           <div className="grid fr2">
             <CareerCard
               heading={'Next Developer '}
