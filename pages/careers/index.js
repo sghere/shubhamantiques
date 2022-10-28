@@ -14,7 +14,7 @@ const index = () => {
           </h2>
           <hr />
           <div className="CardBody">{description}</div>
-          <Link href={buttonLink}>
+          <Link legacyBehavior href={buttonLink}>
             <button className="btn">connect</button>
           </Link>
         </div>

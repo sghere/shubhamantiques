@@ -13,32 +13,32 @@ const About = () => {
       <>
         <div className={styles.BlogWrapper}>
           {/* <video
-            autoPlay
-            muted
-            loop
-            className={styles.videoTag}
-            poster="video_poster.JPG"
-          >
-            <source src="/video1.mp4#t=0.1" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          <div>
-            <p className={styles.BlogText}>
-              <span className={styles.ImpText}>Shubham Antique Shop</span> is an
-              Antiques business that has been operating in Mumbai for the last
-              20 years. Managed and run by{' '}
-              <span className={styles.ImpText}>Mahesh Baban Gaikwad</span> In
-              the past, it was only possible to visit our store to browse
-              through our collection of antiques, but now we have an online
-              store as well. We carry a wide selection of antiques watches,
-              clocks and other artifacts that are perfect for those looking to
-              add some old-world charm to their home.
-            </p>
-          </div> */}
+          autoPlay
+          muted
+          loop
+          className={styles.videoTag}
+          poster="video_poster.JPG"
+        >
+          <source src="/video1.mp4#t=0.1" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div>
+          <p className={styles.BlogText}>
+            <span className={styles.ImpText}>Shubham Antique Shop</span> is an
+            Antiques business that has been operating in Mumbai for the last
+            20 years. Managed and run by{' '}
+            <span className={styles.ImpText}>Mahesh Baban Gaikwad</span> In
+            the past, it was only possible to visit our store to browse
+            through our collection of antiques, but now we have an online
+            store as well. We carry a wide selection of antiques watches,
+            clocks and other artifacts that are perfect for those looking to
+            add some old-world charm to their home.
+          </p>
+        </div> */}
           <div className={styles.fullscreenf}>
             <div className="FadeIn">
               <p>Meet,</p>
-              <Link href="#Intro" scroll={false}>
+              <Link legacyBehavior href="#Intro" scroll={false}>
                 <h1>Mahesh Baban Gaikwad</h1>
               </Link>
             </div>

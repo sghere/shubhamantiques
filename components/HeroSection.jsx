@@ -26,7 +26,7 @@ const HeroSection = () => {
         <h1>
           {text1} <span className="gradient"> {htext}</span> {text2}
         </h1>
-        <Link href={'#' + link} scroll={false}>
+        <Link legacyBehavior href={'#' + link} scroll={false}>
           <h4
             className="blinkAnim pt-2 landingLinks"
             onClick={loginToggle ? () => dispatch(toggleLoginForm()) : null}
@@ -51,7 +51,7 @@ const HeroSection = () => {
               decorate yourself with
               <span className="gradient"> timeless</span> things
               <br />
-              <Link href="/shop" scroll={false}>
+              <Link legacyBehavior href="/shop" scroll={false}>
                 <button className="btn">start shopping</button>
               </Link>
             </h1>
@@ -72,7 +72,7 @@ const HeroSection = () => {
       </div>
 
       <div className="grid place-center landingScroll">
-        <Link href="#section2" scroll={false}>
+        <Link legacyBehavior href="#section2" scroll={false}>
           <p className="text-center">
             <br /> <CgScrollV />
           </p>

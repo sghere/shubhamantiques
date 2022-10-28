@@ -12,7 +12,7 @@ const ProductCard = ({
   IsLoading,
 }) => {
   return (
-    <Link href={'/shop/' + id}>
+    <Link legacyBehavior href={'/shop/' + id}>
       <div className={styles.Card}>
         <Image src={img} className={styles.ProductImage} />
         <div className={styles.CardBody}>

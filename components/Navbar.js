@@ -26,7 +26,7 @@ const Navbar = () => {
       <nav className="topnav">
         {/* <div className=" "> */}
         <div className="navbar-logo">
-          <Link href="/">
+          <Link legacyBehavior href="/">
             <a className="navitem logo">Shubham Antiques</a>
           </Link>
         </div>
@@ -35,13 +35,13 @@ const Navbar = () => {
             'topnav-links hide-sm ' + (ToggleNavbar ? '' : 'openmenu Show')
           }
         >
-          <Link href="/about">
+          <Link legacyBehavior href="/about">
             <li className="navitem">about</li>
           </Link>
-          <Link href="/shop">
+          <Link legacyBehavior href="/shop">
             <li className="navitem">shop</li>
           </Link>
-          <Link href="/careers">
+          <Link legacyBehavior href="/careers">
             <li className="navitem">careers</li>
           </Link>
         </ul>
