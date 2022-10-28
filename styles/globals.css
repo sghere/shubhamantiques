@@ -307,6 +307,11 @@ a {
   animation: FadeIn 1s ease 1s 1 normal forwards;
 }
 
+.Image {
+  width: 100%;
+  height: auto;
+}
+
 @keyframes FadeIn {
   0% {
     opacity: 0;

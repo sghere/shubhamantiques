@@ -14,7 +14,12 @@ const ProductCard = ({
   return (
     <Link legacyBehavior href={'/shop/' + id}>
       <div className={styles.Card}>
-        <Image src={img} className={styles.ProductImage} />
+        <Image
+          alt={img}
+          placeholder="blur"
+          src={img}
+          className={styles.ProductImage}
+        />
         <div className={styles.CardBody}>
           <div className={styles.CardHeader}>
             <h2>{ProductName}</h2>

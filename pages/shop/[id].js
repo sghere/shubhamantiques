@@ -84,7 +84,12 @@ const ProductPage = () => {
             <>
               <div className={styles.ProductContainer + ' FadeIn'}>
                 <div className={styles.ProductLeft}>
-                  <Image src={img} className={styles.ProductImage} />
+                  <Image
+                    alt={img}
+                    placeholder="blur"
+                    src={img}
+                    className={styles.ProductImage}
+                  />
                 </div>
                 <div className={styles.ProductRight}>
                   <div className={styles.Wrapper}>

@@ -60,7 +60,12 @@ const About = () => {
                 </p>
               </div>
               <div className={styles.Right}>
-                <Image src={img} className={styles.ProductImage} />
+                <Image
+                  alt={img}
+                  placeholder="blur"
+                  src={img}
+                  className="Image"
+                />
               </div>
             </div>
           </div>
