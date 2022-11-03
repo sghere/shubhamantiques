@@ -1,0 +1,18 @@
+.UploadProductsContainer {
+  font-family: var(--font-body);
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+}
+
+.UploadProductsCard {
+  width: 100%;
+  display: grid;
+  gap: 1rem;
+  background-color: var(--card-bg);
+  padding: 2rem;
+}

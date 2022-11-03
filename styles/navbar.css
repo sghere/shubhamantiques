@@ -134,6 +134,28 @@
   color: var(--text-color);
 }
 
+.inputfile {
+  content: none;
+  outline: 1px dashed var(--text-color);
+  padding: 5rem;
+  text-align: center;
+  position: relative;
+}
+.inputfile:hover {
+  outline: 1px dashed var(--h-color);
+  cursor: pointer;
+  padding: 5rem;
+}
+
+#fileUpload {
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .flex {
   display: flex;
 }
