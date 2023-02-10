@@ -56,6 +56,7 @@ const index = ({ Data }) => {
 };
 
 export async function getStaticProps() {
+  if (!process.env.BASE_URL) return;
   console.log("Calliong");
   const res = await fetch(process.env.BASE_URL + "/api/product");
   const Data = await res.json();
