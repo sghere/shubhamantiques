@@ -12,6 +12,7 @@ export const config = {
 };
 
 const uploadFile = (files, path) => {
+  console.log("Files:", files.File);
   const data = fs.readFileSync(files.File?.filepath);
   fs.writeFileSync(path, data);
 };
@@ -21,8 +22,6 @@ export default async function handler(req, res) {
   const { method } = req;
   if (method === "POST") {
     try {
-      console.log("Connection Started");
-      console.log("Connection End");
       const form = new formidable.IncomingForm();
       form.parse(req, async (err, fields, files) => {
         if (err) return res.status(500).json({ err });
