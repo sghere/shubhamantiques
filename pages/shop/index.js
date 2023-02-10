@@ -1,10 +1,10 @@
-import Head from 'next/head';
-import Script from 'next/script';
-import React from 'react';
-import Layout from '../../components/Layout';
-import ProductsContainer from '../../components/ProductsContainer';
+import Head from "next/head";
+import Script from "next/script";
+import React from "react";
+import Layout from "../../components/Layout";
+import ProductsContainer from "../../components/ProductsContainer";
 
-const index = () => {
+const index = ({ Data }) => {
   return (
     <>
       <Head>
@@ -48,11 +48,20 @@ const index = () => {
             Products added here are for testing purposes only...will be adding
             real products soon.
           </p>
-          <ProductsContainer />
+          <ProductsContainer Data={Data} />
         </div>
       </Layout>
     </>
   );
 };
+
+export async function getStaticProps() {
+  console.log("Calliong");
+  const res = await fetch(process.env.BASE_URL + "/api/product");
+  const Data = await res.json();
+  return {
+    props: { Data: Data.data }, // will be passed to the page component as props
+  };
+}
 
 export default index;

@@ -80,3 +80,8 @@
 .ProductDesc {
   max-width: 75ch;
 }
+
+.Image {
+  position: relative;
+  height: 180px;
+}

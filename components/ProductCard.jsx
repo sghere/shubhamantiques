@@ -1,7 +1,7 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import React from 'react';
-import styles from './ProductCard.module.css';
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+import styles from "./ProductCard.module.css";
 
 const ProductCard = ({
   id,
@@ -12,9 +12,18 @@ const ProductCard = ({
   IsLoading,
 }) => {
   return (
-    <Link href={'/shop/' + id}>
+    <Link href={"/shop/" + id}>
       <div className={styles.Card}>
-        <Image src={img} className={styles.ProductImage} />
+        <div className={styles.Image}>
+          <Image
+            src={img}
+            layout="fill"
+            objectFit="cover"
+            className={styles.ProductImage}
+            alt={ProductName}
+          />
+        </div>
+
         <div className={styles.CardBody}>
           <div className={styles.CardHeader}>
             <h2>{ProductName}</h2>

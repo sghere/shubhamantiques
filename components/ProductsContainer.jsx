@@ -1,29 +1,29 @@
-import React, { useState, useEffect, useTransition } from 'react';
-import ProductCard from './ProductCard';
-import img from '../public/images/abc.jpg';
+import React, { useState, useEffect, useTransition } from "react";
+import ProductCard from "./ProductCard";
+import img from "../public/images/abc.jpg";
 
-const ProductsContainer = () => {
-  const [Data, setData] = useState([]);
+const ProductsContainer = (props) => {
+  // const [Data, setData] = useState([]);
   const [IsLoading, setIsLoading] = useState(false);
-  useEffect(() => {
-    setIsLoading(true);
-    fetch('https://dummyjson.com/products')
-      .then((res) => res.json())
-      .then((result) => {
-        setData(result.products);
-        setIsLoading(false);
-      });
-  }, []);
+  // useEffect(() => {
+  //   setIsLoading(true);
+  //   fetch("/api/product")
+  //     .then((res) => res.json())
+  //     .then((result) => {
+  //       setData(result.data);
+  //       setIsLoading(false);
+  //     });
+  // }, []);
 
-  const DisplayProducts = Data.map((e) => (
+  const DisplayProducts = props.Data.map((e) => (
     <ProductCard
       className="FadeIn"
       key={e.id}
       id={e.id}
-      img={img}
-      ProductName={e.title}
-      ProductDescription={e.description}
-      ProductPrice={'$' + e.price}
+      img={e.imagepath.replace("./public", "")}
+      ProductName={e.Name}
+      ProductDescription={e.Desc}
+      ProductPrice={"$" + e.Price}
     />
   ));
 
