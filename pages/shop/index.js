@@ -64,10 +64,16 @@ export async function getStaticProps() {
 
   console.log("Calliong");
   const res = await fetch(process.env.BASE_URL + "/api/product");
-  const Data = await res.json();
-  return {
-    props: { Data: Data.data }, // will be passed to the page component as props
-  };
+  if (res.status === 200) {
+    const Data = await res.json();
+    return {
+      props: { Data: Data.data }, // will be passed to the page component as props
+    };
+  } else {
+    return {
+      props: { Data: [] }, // will be passed to the page component as props
+    };
+  }
 }
 
 export default index;
