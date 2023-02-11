@@ -62,7 +62,6 @@ export async function getStaticProps() {
     };
   }
 
-  console.log("Calliong");
   const res = await fetch(process.env.BASE_URL + "/api/product");
   if (res.status === 200) {
     const Data = await res.json();

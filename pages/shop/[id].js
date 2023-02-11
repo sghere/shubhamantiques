@@ -14,7 +14,7 @@ const ProductPage = () => {
   const [IsLoading, setIsLoading] = useState(true);
   const [Product, setProduct] = useState({});
   const router = useRouter();
-  console.log(Product);
+
   useEffect(() => {
     // fetch('https://dummyjson.com/products')
     //   .then((res) => res.json())
@@ -78,7 +78,7 @@ const ProductPage = () => {
         `}
       </Script>
       <Layout>
-        <div className="Section p-3">
+        <div className="Section">
           {IsLoading ? (
             <div className="spinner"></div>
           ) : (

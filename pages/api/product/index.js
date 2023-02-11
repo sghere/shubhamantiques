@@ -50,9 +50,9 @@ export default async function handler(req, res) {
           ...fields,
           imagepath: imageUrl,
         };
-        console.log(newFields);
+
         const product = await Product.create(newFields);
-        console.log(product);
+
         res.status(200).json("Upload Done!");
       });
     } catch (error) {
