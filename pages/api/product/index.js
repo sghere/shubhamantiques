@@ -8,6 +8,7 @@ import Product from "../../../models/Product";
 export const config = {
   api: {
     bodyParser: false,
+    responseLimit: false,
   },
 };
 
