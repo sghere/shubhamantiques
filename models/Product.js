@@ -7,6 +7,7 @@ const ProductSchema = new mongoose.Schema({
   Price: String,
   Category: String,
   imagepath: String,
+  Date: Date,
 });
 
 module.exports =

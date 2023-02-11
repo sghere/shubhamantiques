@@ -8,4 +8,45 @@
 .Form select {
   height: 40px;
   padding: 5px;
+  cursor: pointer;
+}
+
+.Form input[type="file"] {
+  border: 1px solid green;
+  display: grid;
+  place-items: center;
+  height: 100px;
+  width: 100%;
+  opacity: 0;
+  z-index: 1;
+}
+
+.FileContainer {
+  border: 1px solid green;
+  position: relative;
+}
+
+.FileContainer:after {
+  content: url(../../public/images/camera.svg);
+  display: grid;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  place-items: center;
+  z-index: 0;
+  pointer-events: none;
+  background-color: white;
+}
+
+.FileContainer.FileSelected:after {
+  content: url(../../public/images/tick.svg);
+  display: grid;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  place-items: center;
+  z-index: 0;
+  pointer-events: none;
 }
