@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Layout from "../../components/Layout";
 import styles from "./upload.module.css";
 
-const index = () => {
+const Index = () => {
   const [SelectedFile, setSelectedFile] = useState("");
   const [Loading, setLoading] = useState(false);
   const toBase64 = (file) =>
@@ -81,4 +81,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;
