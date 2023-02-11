@@ -1,19 +1,20 @@
-import Head from 'next/head';
-import Image from 'next/image';
-import Script from 'next/script';
-import React, { useState, useEffect } from 'react';
-import Layout from '../../components/Layout';
-import styles from '../../components/ProductCard.module.css';
-import img from '../../public/images/abc.jpg';
-import ProductCard from '../../components/ProductCard';
+import Head from "next/head";
+import Image from "next/image";
+import Script from "next/script";
+import React, { useState, useEffect } from "react";
+import Layout from "../../components/Layout";
+import styles from "../../components/ProductCard.module.css";
+import img from "../../public/images/abc.jpg";
+import ProductCard from "../../components/ProductCard";
 
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 
 const ProductPage = () => {
   const [Data, setData] = useState([]);
   const [IsLoading, setIsLoading] = useState(true);
   const [Product, setProduct] = useState({});
   const router = useRouter();
+  console.log(Product);
   useEffect(() => {
     // fetch('https://dummyjson.com/products')
     //   .then((res) => res.json())
@@ -23,11 +24,11 @@ const ProductPage = () => {
     //   });
     if (router && router.query.id) {
       const id = router.query.id;
-      fetch('https://dummyjson.com/products/' + id)
+      fetch("/api/product/" + id)
         .then((res) => res.json())
         .then((result) => {
+          setProduct(result.data);
           setIsLoading(false);
-          setProduct(result);
         });
     }
   }, [router]);
@@ -46,7 +47,7 @@ const ProductPage = () => {
   return (
     <>
       <Head>
-        <title>{Product.title} | Shubham Antiques</title>
+        <title>{Product?.Name} | Shubham Antiques</title>
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff"></meta>
 
@@ -82,19 +83,36 @@ const ProductPage = () => {
             <div className="spinner"></div>
           ) : (
             <>
-              <div className={styles.ProductContainer + ' FadeIn'}>
+              <div className={styles.ProductContainer + " FadeIn"}>
                 <div className={styles.ProductLeft}>
-                  <Image src={img} className={styles.ProductImage} />
+                  {Product.imagepath ? (
+                    <Image
+                      src={Product?.imagepath}
+                      className={styles.ProductImage}
+                      layout="fill"
+                      objectFit="cover"
+                    />
+                  ) : null}
                 </div>
                 <div className={styles.ProductRight}>
                   <div className={styles.Wrapper}>
                     <h2 className={styles.Heading}>
-                      {Product.title}
+                      {Product?.Name}
                       <hr />
                     </h2>
-                    <h3 className={styles.ProductPrice}>${Product.price}</h3>
-                    <p className={styles.ProductDesc}>{Product.description}</p>
-                    <button className="btn btn-success">buy now</button>
+                    <h3 className={styles.ProductPrice}>${Product?.Price}</h3>
+                    <p className={styles.ProductDesc}>{Product?.Desc}</p>
+                    <button
+                      className="btn btn-success"
+                      onClick={() => {
+                        window.open(
+                          "https://api.whatsapp.com/send/?phone=%2B918655301910&text=Hi, Wanted to know more about the product. " +
+                            window.location.href
+                        );
+                      }}
+                    >
+                      Send Text
+                    </button>
                   </div>
                 </div>
               </div>

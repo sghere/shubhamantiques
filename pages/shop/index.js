@@ -44,10 +44,10 @@ const index = ({ Data }) => {
             Products
             <hr className="HeadingBorderHr" />
           </h2>
-          <p>
+          {/* <p>
             Products added here are for testing purposes only...will be adding
             real products soon.
-          </p>
+          </p> */}
           <ProductsContainer Data={Data} />
         </div>
       </Layout>

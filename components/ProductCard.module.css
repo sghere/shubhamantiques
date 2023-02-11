@@ -27,6 +27,11 @@
   gap: 0.5rem;
 }
 
+.ProductLeft {
+  position: relative;
+  height: 20rem;
+}
+
 .ProductRight {
   display: grid;
   gap: 1rem;
