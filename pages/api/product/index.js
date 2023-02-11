@@ -40,7 +40,7 @@ export default async function handler(req, res) {
       const form = new formidable.IncomingForm();
       form.parse(req, async (err, fields, files) => {
         if (err) return res.status(500).json({ err });
-
+        console.log(fields);
         const id = uuidv4();
 
         const imageUrl = await ImageUpload(fields.imagepath, id);

@@ -23,7 +23,7 @@ const index = () => {
           formData.append("Name", e.target[1].value);
           formData.append("Desc", e.target[2].value);
           formData.append("Price", e.target[3].value);
-
+          formData.append("Category", e.target[4].value);
           fetch("/api/product", {
             method: "post",
             body: formData,
@@ -44,6 +44,12 @@ const index = () => {
           <input type="text" required id="Name" />
           <input type="textarea" required id="Desc" />
           <input type="text" required inputMode="numeric" id="Price" />
+          <select id="Category" required name="Category">
+            <option value="Idols">Idols</option>
+            <option value="Watches">Watches</option>
+            <option value="Pens">Pens</option>
+            <option value="Jewellery">Jewellery</option>
+          </select>
           <input type="submit" value={"Submit"} />
         </div>
       </form>
