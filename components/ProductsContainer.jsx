@@ -20,7 +20,7 @@ const ProductsContainer = (props) => {
       className="FadeIn"
       key={e.id}
       id={e.id}
-      img={e.imagepath.replace("./public", "")}
+      img={e.imagepath?.replace("./public", "")}
       ProductName={e.Name}
       ProductDescription={e.Desc}
       ProductPrice={"$" + e.Price}

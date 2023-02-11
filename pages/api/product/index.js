@@ -12,6 +12,26 @@ export const config = {
   },
 };
 
+const ImageUpload = async (image, name) => {
+  var ImageKit = require("imagekit");
+  var imagekit = new ImageKit({
+    publicKey: "public_1HhPjH62z4bH2ic4vT09Y/LZq5s=",
+    privateKey: "private_rDd7xTRSwnxIwIwy3fBbK/JuvEQ=",
+    urlEndpoint: "https://ik.imagekit.io/mrsg/",
+  });
+
+  const uploadPromise = imagekit.upload({
+    file: image,
+    fileName: name,
+  });
+
+  const URL = await uploadPromise.then((res) => {
+    return res;
+  });
+
+  return URL.url;
+};
+
 export default async function handler(req, res) {
   await dbConnect();
   const { method } = req;
@@ -23,11 +43,14 @@ export default async function handler(req, res) {
 
         const id = uuidv4();
 
+        const imageUrl = await ImageUpload(fields.imagepath, id);
+
         let newFields = {
           id: id,
           ...fields,
+          imagepath: imageUrl,
         };
-
+        console.log(newFields);
         const product = await Product.create(newFields);
         console.log(product);
         res.status(200).json("Upload Done!");
