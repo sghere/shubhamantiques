@@ -1,21 +1,21 @@
-import React, { useState, useEffect, useTransition } from "react";
+import React, { useState, useEffect } from "react";
 import ProductCard from "./ProductCard";
 import img from "../public/images/abc.jpg";
 
 const ProductsContainer = (props) => {
-  // const [Data, setData] = useState([]);
+  const [Data, setData] = useState(props.Data);
   const [IsLoading, setIsLoading] = useState(false);
-  // useEffect(() => {
-  //   setIsLoading(true);
-  //   fetch("/api/product")
-  //     .then((res) => res.json())
-  //     .then((result) => {
-  //       setData(result.data);
-  //       setIsLoading(false);
-  //     });
-  // }, []);
+  useEffect(() => {
+    setIsLoading(true);
+    fetch("/api/product")
+      .then((res) => res.json())
+      .then((result) => {
+        setData(result.data);
+        setIsLoading(false);
+      });
+  }, []);
 
-  const DisplayProducts = props.Data.map((e) => (
+  const DisplayProducts = Data.map((e) => (
     <ProductCard
       className="FadeIn"
       key={e.id}
