@@ -11,12 +11,6 @@ export const config = {
   },
 };
 
-const uploadFile = (files, path) => {
-  console.log("Files:", files.File);
-  const data = fs.readFileSync(files.File?.filepath);
-  fs.writeFileSync(path, data);
-};
-
 export default async function handler(req, res) {
   await dbConnect();
   const { method } = req;
@@ -27,13 +21,12 @@ export default async function handler(req, res) {
         if (err) return res.status(500).json({ err });
 
         const id = uuidv4();
-        let path = "./public/images/productImages/" + id + ".jpg";
+
         let newFields = {
           id: id,
           ...fields,
-          imagepath: path,
         };
-        if (files.File) uploadFile(files, path);
+
         const product = await Product.create(newFields);
         console.log(product);
         res.status(200).json("Upload Done!");

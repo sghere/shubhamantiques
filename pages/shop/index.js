@@ -55,7 +55,7 @@ const index = ({ Data }) => {
   );
 };
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   if (!process.env.BASE_URL) {
     return {
       props: { Data: [] }, // will be passed to the page component as props

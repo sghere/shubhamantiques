@@ -2,15 +2,24 @@ import React from "react";
 import styles from "./upload.module.css";
 
 const index = () => {
+  const toBase64 = (file) =>
+    new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = (error) => reject(error);
+    });
+
   return (
     <div>
       <form
         id="formFileUpload"
-        onSubmit={(e) => {
+        onSubmit={async (e) => {
           e.preventDefault();
-          console.log(e.target[0].files[0]);
+          let image = await toBase64(e.target[0].files[0]);
+
           var formData = new FormData();
-          formData.append("File", e.target[0].files[0], "File.jpg");
+          formData.append("imagepath", image);
           formData.append("Name", e.target[1].value);
           formData.append("Desc", e.target[2].value);
           formData.append("Price", e.target[3].value);
@@ -19,6 +28,7 @@ const index = () => {
             method: "post",
             body: formData,
           }).then((res) => {
+            console.log(res);
             if (res.status === 200) {
               alert("Product Added Successfully!");
               document.getElementById("formFileUpload").reset();
