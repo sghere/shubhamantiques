@@ -39,7 +39,7 @@ const index = ({ Data }) => {
         `}
       </Script>
       <Layout>
-        <div className="Section p-3 FadeIn">
+        <div className="Section FadeIn">
           <h2>
             Products
             <hr className="HeadingBorderHr" />

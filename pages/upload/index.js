@@ -43,10 +43,13 @@ const Index = () => {
 
   return (
     <Layout>
-      {Loading ? <div className="spinner"></div> : ""}
       <div>
         <form id="formFileUpload" onSubmit={SubmitHandler}>
-          <div className={styles.Form}>
+          <div
+            className={
+              !Loading ? styles.Form : styles.Form + " " + styles.FormLoading
+            }
+          >
             <div
               className={
                 SelectedFile != ""
@@ -73,7 +76,11 @@ const Index = () => {
               <option value="Pens">Pens</option>
               <option value="Jewellery">Jewellery</option>
             </select>
-            <input type="submit" value={"Submit"} />
+            {Loading ? (
+              <div className="spinner"></div>
+            ) : (
+              <input type="submit" value={"Submit"} />
+            )}
           </div>
         </form>
       </div>
