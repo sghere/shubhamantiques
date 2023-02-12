@@ -100,7 +100,7 @@ const ProductPage = () => {
                       {Product?.Name}
                       <hr />
                     </h2>
-                    <h3 className={styles.ProductPrice}>${Product?.Price}</h3>
+                    <h3 className={styles.ProductPrice}>₹{Product?.Price}</h3>
                     <p className={styles.ProductDesc}>{Product?.Desc}</p>
                     <button
                       className="btn btn-success"
