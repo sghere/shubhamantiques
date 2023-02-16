@@ -3,7 +3,7 @@
 .Card {
   background: var(--card-bg);
   border-radius: 0.3rem;
-  max-height: 30em;
+  /* max-height: 30em; */
   display: grid;
   transition: 0.5s;
 }
@@ -29,7 +29,9 @@
 
 .ProductLeft {
   position: relative;
-  height: 20rem;
+  /* height: 20rem; */
+  aspect-ratio: 4/5;
+  max-height: 30rem;
 }
 
 .ProductRight {
@@ -49,7 +51,7 @@
   /* background: var(--card-bg); */
   border-radius: 0.3rem;
 
-  padding: 1rem;
+  /* padding: 1rem; */
   gap: 1rem;
   width: 100%;
 
@@ -88,5 +90,6 @@
 
 .Image {
   position: relative;
-  height: 180px;
+  /* max-height: 30rem; */
+  aspect-ratio: 4 / 5;
 }

@@ -2,6 +2,7 @@
   display: grid;
   min-height: var(--first-container-height);
   place-items: center;
+  align-content: baseline;
   gap: 2rem;
   width: 100%;
   padding: 3rem 0px;
