@@ -100,8 +100,7 @@ const ProductPage = () => {
                       {Product?.Name}
                       <hr />
                     </h2>
-                    <h3 className={styles.ProductPrice}>₹{Product?.Price}</h3>
-                    <p className={styles.ProductDesc}>{Product?.Desc}</p>
+                    <h3 className={styles.ProductPrice}>${Product?.Price}</h3>
                     <button
                       className="btn btn-success"
                       onClick={() => {
@@ -113,6 +112,7 @@ const ProductPage = () => {
                     >
                       Send Text
                     </button>
+                    <p className={styles.ProductDesc}>{Product?.Desc}</p>
                   </div>
                 </div>
               </div>

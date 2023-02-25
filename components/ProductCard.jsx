@@ -30,7 +30,7 @@ const ProductCard = ({
             {/* <button className="btn">buy now</button> */}
             <h2 className={styles.ProductPrice}>{ProductPrice}/-</h2>
           </div>
-          <p>{ProductDescription}</p>
+          <p className={styles.Desc}>{ProductDescription}</p>
         </div>
       </div>
     </Link>

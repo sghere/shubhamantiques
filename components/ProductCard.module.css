@@ -86,10 +86,21 @@
 
 .ProductDesc {
   max-width: 75ch;
+  white-space: break-spaces;
 }
 
 .Image {
   position: relative;
   /* max-height: 30rem; */
   aspect-ratio: 4 / 5;
+}
+
+.Desc {
+  max-width: 22ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: break-spaces;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
 }

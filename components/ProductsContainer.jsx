@@ -23,7 +23,7 @@ const ProductsContainer = (props) => {
       img={e.imagepath?.replace("./public", "")}
       ProductName={e.Name}
       ProductDescription={e.Desc}
-      ProductPrice={"₹" + e.Price}
+      ProductPrice={"$" + e.Price}
     />
   ));
 

@@ -253,6 +253,7 @@ a {
   width: 100%;
   grid-gap: 2rem;
   grid-template-columns: repeat(4, minmax(100px, 1fr));
+  padding: 20px;
 }
 
 @media (max-width: 1024px) {
