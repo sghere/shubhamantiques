@@ -55,24 +55,24 @@ const index = ({ Data }) => {
   );
 };
 
-export async function getStaticProps() {
-  if (!process.env.BASE_URL) {
-    return {
-      props: { Data: [] }, // will be passed to the page component as props
-    };
-  }
+// export async function getStaticProps() {
+//   if (!process.env.BASE_URL) {
+//     return {
+//       props: { Data: [] }, // will be passed to the page component as props
+//     };
+//   }
 
-  const res = await fetch(process.env.BASE_URL + "/api/product");
-  if (res.status === 200) {
-    const Data = await res.json();
-    return {
-      props: { Data: Data.data }, // will be passed to the page component as props
-    };
-  } else {
-    return {
-      props: { Data: [] }, // will be passed to the page component as props
-    };
-  }
-}
+//   const res = await fetch(process.env.BASE_URL + "/api/product");
+//   if (res.status === 200) {
+//     const Data = await res.json();
+//     return {
+//       props: { Data: Data.data }, // will be passed to the page component as props
+//     };
+//   } else {
+//     return {
+//       props: { Data: [] }, // will be passed to the page component as props
+//     };
+//   }
+// }
 
 export default index;
