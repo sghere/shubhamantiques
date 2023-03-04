@@ -1,10 +1,10 @@
-import React from 'react';
-import { useDispatch } from 'react-redux';
-import { toggleLoginForm } from '../redux/togglerSlice';
+import React from "react";
+import { useDispatch } from "react-redux";
+import { toggleLoginForm } from "../redux/togglerSlice";
 
-import { CgScrollV } from 'react-icons/cg';
-import Link from 'next/link';
-import Head from 'next/head';
+import { CgScrollV } from "react-icons/cg";
+import Link from "next/link";
+import Head from "next/head";
 
 const HeroSection = () => {
   const dispatch = useDispatch();
@@ -26,7 +26,7 @@ const HeroSection = () => {
         <h1>
           {text1} <span className="gradient"> {htext}</span> {text2}
         </h1>
-        <Link href={'#' + link} scroll={false}>
+        <Link href={"#" + link} scroll={false}>
           <h4
             className="blinkAnim pt-2 landingLinks"
             onClick={loginToggle ? () => dispatch(toggleLoginForm()) : null}
@@ -102,6 +102,9 @@ const HeroSection = () => {
         blinktext="login now to buy fabulous...🤩"
         loginToggle={true}
       />
+      <div className="HeroSection2 Logo">
+        <img src="images/Logo.svg" height="100px" alt="" />
+      </div>
     </>
   );
 };

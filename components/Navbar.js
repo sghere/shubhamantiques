@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import React, { useState } from 'react';
+import Link from "next/link";
+import React, { useState } from "react";
 
 import {
   BsFillSunFill,
@@ -7,13 +7,13 @@ import {
   BsEmojiSunglasses,
   BsEmojiSunglassesFill,
   BsSunFill,
-} from 'react-icons/bs';
-import { GiHamburgerMenu } from 'react-icons/gi';
-import { ImCross } from 'react-icons/im';
-import Modal from './Modal';
+} from "react-icons/bs";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { ImCross } from "react-icons/im";
+import Modal from "./Modal";
 
-import { useSelector, useDispatch } from 'react-redux';
-import { toggleTheme, toggleLoginForm } from '../redux/togglerSlice';
+import { useSelector, useDispatch } from "react-redux";
+import { toggleTheme, toggleLoginForm } from "../redux/togglerSlice";
 
 const Navbar = () => {
   const dispatch = useDispatch();
@@ -27,12 +27,14 @@ const Navbar = () => {
         {/* <div className=" "> */}
         <div className="navbar-logo">
           <Link href="/">
-            <a className="navitem logo">Shubham Antiques</a>
+            <a className="navitem logo">
+              <img src="/images/Logo.svg" height="35px" alt="Logo" />
+            </a>
           </Link>
         </div>
         <ul
           className={
-            'topnav-links hide-sm ' + (ToggleNavbar ? '' : 'openmenu Show')
+            "topnav-links hide-sm " + (ToggleNavbar ? "" : "openmenu Show")
           }
         >
           <Link href="/about">
