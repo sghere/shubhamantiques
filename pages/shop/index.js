@@ -4,7 +4,7 @@ import React from "react";
 import Layout from "../../components/Layout";
 import ProductsContainer from "../../components/ProductsContainer";
 
-const index = ({ Data }) => {
+const index = ({ Data = [] }) => {
   return (
     <>
       <Head>
