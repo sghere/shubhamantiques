@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
 
 * {
   margin: 0;
@@ -8,6 +12,7 @@
   box-sizing: border-box;
 }
 .dark-theme {
+  --price-color: var(--primary-theme);
   --background: var(--gray6);
   --background-opacity: #12181b95;
   --text-color: var(--gray2);
@@ -28,6 +33,7 @@
 }
 
 .light-theme {
+  --price-color: #ff3838;
   --background: var(--gray1);
   --background-opacity: #f8f8f895;
   --text-color: var(--gray4);
@@ -47,6 +53,7 @@
 }
 
 :root {
+  --primary-theme: #f8c291;
   --primary-color: #4834d4;
   --red: #ff3860;
   --red-dark: #ff1443;
@@ -78,8 +85,8 @@
   --gray6: #12181b;
   --nav-height: 4em;
   --first-container-height: calc(100vh - var(--nav-height));
-  --font-body: "sofia-pro", sans-serif;
-  --font-head: "Anton", sans-serif;
+  --font-body: "Quicksand", sans-serif;
+  --font-head: "Abril Fatface", cursive;
   --font-code: "attribute-mono", monospace;
   --font-size: 20px;
   --font-thin: "Poppins", sans-serif;
@@ -158,7 +165,7 @@ body {
 }
 
 .container {
-  min-width: 80%;
+  min-width: 100%;
   max-width: 1500px;
   justify-self: center;
 }
@@ -204,6 +211,15 @@ main {
 .btn-success:hover {
   color: var(--green-dark);
   border-color: var(--green-dark);
+}
+
+.btn-theme {
+  color: var(--primary-theme);
+  border-color: var(--primary-theme);
+}
+.btn-theme:hover {
+  color: var(--primary-theme);
+  border-color: var(--primary-theme);
 }
 
 .btn:active {

@@ -1,29 +1,29 @@
-import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
 import {
   AiOutlineInstagram,
   AiOutlineFacebook,
   AiOutlineWhatsApp,
   AiOutlineYoutube,
   AiOutlinePhone,
-} from 'react-icons/ai';
-import { BsPhone } from 'react-icons/bs';
+} from "react-icons/ai";
+import { BsPhone } from "react-icons/bs";
 
 const Footer = () => {
   const [VisitCount, setVisitCount] = useState(0);
 
   useEffect(() => {
-    fetch('https://api.countapi.xyz/hit/shubhamantiques.shop/visits')
+    fetch("https://api.countapi.xyz/hit/shubhamantiques.shop/visits")
       .then((res) => res.json())
       .then((result) => setVisitCount(result.value));
   }, []);
 
   return (
     <div className="container">
-      <hr />
+      {/* <hr /> */}
       <div className="FooterContainer pt-5 pb-5 text-center">
         <p>
-          need help? email:{' '}
+          need help? email:{" "}
           <a href="mailto:info@shubhamantiques.shop">
             info@shubhamantiques.shop
           </a>

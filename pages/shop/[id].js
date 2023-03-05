@@ -102,7 +102,7 @@ const ProductPage = () => {
                     </h2>
                     <h3 className={styles.ProductPrice}>${Product?.Price}</h3>
                     <button
-                      className="btn btn-success"
+                      className="btn btn-theme"
                       onClick={() => {
                         window.open(
                           "https://api.whatsapp.com/send/?phone=%2B918655301910&text=Hi, Wanted to know more about the product. " +
