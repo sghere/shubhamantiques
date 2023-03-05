@@ -1,9 +1,9 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = { Theme: false, LoginForm: false };
+const initialState = { Theme: true, LoginForm: false };
 
 export const togglerSlice = createSlice({
-  name: 'toggler',
+  name: "toggler",
   initialState,
   reducers: {
     toggleTheme: (state) => {
