@@ -1,11 +1,12 @@
-import Head from 'next/head';
-import Script from 'next/script';
-import React from 'react';
-import Layout from '../../components/Layout';
-import styles from './blog.module.css';
-import img from '../../public/images/mg.jpeg';
-import Image from 'next/image';
-import Link from 'next/link';
+import Head from "next/head";
+import Script from "next/script";
+import React from "react";
+import Layout from "../../components/Layout";
+import styles from "./blog.module.css";
+import img from "../../public/images/mg.jpeg";
+import Image from "next/image";
+import Link from "next/link";
+import Userquery from "./user";
 
 const About = () => {
   const BlogWrapper = () => {
@@ -68,6 +69,9 @@ const About = () => {
                 />
               </div>
             </div>
+          </div>
+          <div>
+            <Userquery />
           </div>
         </div>
       </>
