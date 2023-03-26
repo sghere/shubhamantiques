@@ -102,7 +102,7 @@ const ProductPage = () => {
                     </h2>
                     <h3 className={styles.ProductPrice}>${Product?.Price}</h3>
                     <button
-                      className="btn btn-theme"
+                      className={styles.EnquireBtn}
                       onClick={() => {
                         window.open(
                           "https://api.whatsapp.com/send/?phone=%2B918655301910&text=Hi, Wanted to know more about the product. " +
@@ -110,7 +110,8 @@ const ProductPage = () => {
                         );
                       }}
                     >
-                      Send Text
+                      Enquire
+                      <Image src={"/Search.svg"} height="24px" width="24px" />
                     </button>
                     <p className={styles.ProductDesc}>{Product?.Desc}</p>
                   </div>
