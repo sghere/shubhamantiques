@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import Layout from "../../components/Layout";
 import ProductsContainer from "../../components/ProductsContainer";
 
-const index = ({ Data = [] }) => {
+const Index = ({ Data = [] }) => {
   const [Keyword, setKeyword] = useState("");
 
   return (
@@ -92,4 +92,4 @@ const index = ({ Data = [] }) => {
 //   }
 // }
 
-export default index;
+export default Index;
