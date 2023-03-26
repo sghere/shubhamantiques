@@ -61,9 +61,9 @@ export default async function handler(req, res) {
   }
   if (method === "GET") {
     try {
-      const products = await Product.find(
-        {}
-      ); /* find all the data in our database */
+      const products = await Product.find({}).sort({
+        Date: -1,
+      }); /* find all the data in our database */
       res.status(200).json({ success: true, data: products });
     } catch (error) {
       res.status(400).json({ success: false });

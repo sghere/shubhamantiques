@@ -2,15 +2,15 @@ import React, { useState, useEffect } from "react";
 import ProductCard from "./ProductCard";
 import img from "../public/images/abc.jpg";
 
-const ProductsContainer = (props) => {
-  const [Data, setData] = useState(props.Data);
+const ProductsContainer = ({ Data1 = [] }) => {
+  const [Data, setData] = useState(Data1);
   const [IsLoading, setIsLoading] = useState(false);
   useEffect(() => {
     setIsLoading(true);
     fetch("/api/product")
       .then((res) => res.json())
       .then((result) => {
-        setData(result.data);
+        if (result.success) setData(result.data);
         setIsLoading(false);
       });
   }, []);

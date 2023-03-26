@@ -48,7 +48,7 @@ const index = ({ Data = [] }) => {
             Products added here are for testing purposes only...will be adding
             real products soon.
           </p> */}
-          <ProductsContainer Data={Data} />
+          <ProductsContainer Data1={Data} />
         </div>
       </Layout>
     </>

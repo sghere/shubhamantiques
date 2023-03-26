@@ -67,9 +67,15 @@ const Index = () => {
               />
             </div>
 
-            <input type="text" required id="Name" />
-            <input type="textarea" required id="Desc" />
-            <input type="text" required inputMode="numeric" id="Price" />
+            <input type="text" placeholder="Product Name" required id="Name" />
+            <textarea rows="4" placeholder="Description" required id="Desc" />
+            <input
+              type="text"
+              placeholder="Price in Dollars"
+              required
+              inputMode="numeric"
+              id="Price"
+            />
             <select id="Category" required name="Category">
               <option value="Idols">Idols</option>
               <option value="Watches">Watches</option>
