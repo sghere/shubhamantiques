@@ -53,6 +53,34 @@
   width: 50px;
 }
 
+.ProductsHeadingWithSearch {
+  width: inherit;
+  max-width: 80rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 20px;
+}
+.searchInput {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.searchInput input {
+  font-size: 1rem;
+  border: none;
+  background: none;
+  min-width: 0px;
+  width: 0px;
+  outline: none;
+  transition-delay: 0.2s;
+  transition-duration: 0.4s;
+}
+
+.searchInput:hover input,
+.searchInput input[data-length="true"] {
+  min-width: 7.5rem;
+}
+
 @media (max-width: 768px) {
   .CareerCard {
     padding: 15px;

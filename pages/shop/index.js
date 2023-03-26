@@ -1,10 +1,13 @@
 import Head from "next/head";
+import Image from "next/image";
 import Script from "next/script";
-import React from "react";
+import React, { useState } from "react";
 import Layout from "../../components/Layout";
 import ProductsContainer from "../../components/ProductsContainer";
 
 const index = ({ Data = [] }) => {
+  const [Keyword, setKeyword] = useState("");
+
   return (
     <>
       <Head>
@@ -40,15 +43,29 @@ const index = ({ Data = [] }) => {
       </Script>
       <Layout>
         <div className="Section FadeIn">
-          <h2>
-            Products
-            <hr className="HeadingBorderHr" />
-          </h2>
+          <span className="ProductsHeadingWithSearch">
+            <h2>
+              Products
+              <hr className="HeadingBorderHr" />
+            </h2>
+            <span className="searchInput">
+              <Image src={"/Search.svg"} width="24px" height="24px" />
+              <input
+                type="text"
+                value={Keyword}
+                data-length={Keyword.length > 0}
+                onChange={(e) => {
+                  setKeyword(e.target.value);
+                }}
+                placeholder="search"
+              />
+            </span>
+          </span>
           {/* <p>
             Products added here are for testing purposes only...will be adding
             real products soon.
           </p> */}
-          <ProductsContainer Data1={Data} />
+          <ProductsContainer Data1={Data} searchKeyword={Keyword} />
         </div>
       </Layout>
     </>
