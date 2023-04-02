@@ -7,7 +7,7 @@ import {
   AiOutlineYoutube,
   AiOutlinePhone,
 } from "react-icons/ai";
-import { BsPhone } from "react-icons/bs";
+import { FiPhone } from "react-icons/fi";
 
 const Footer = () => {
   const [VisitCount, setVisitCount] = useState(0);
@@ -35,7 +35,7 @@ const Footer = () => {
             rel="noreferrer"
             href="tel:+918655301910"
           >
-            <BsPhone />
+            <FiPhone />
           </a>
           <a
             className="FooterSocialLink"
