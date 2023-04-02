@@ -22,15 +22,15 @@ const ProductsContainer = ({ Data1 = [], searchKeyword = "" }) => {
 
   useEffect(() => {
     const Keyword = searchKeyword.toLowerCase();
-    setShowData(
+    setShowData((Data) => {
       Data.filter((e) => {
         if (
           e.Name.toLowerCase().includes(Keyword) ||
           e.Desc.toLowerCase().includes(Keyword)
         )
           return e;
-      })
-    );
+      });
+    });
   }, [searchKeyword]);
 
   const DisplayProducts = ShowData.map((e) => (
