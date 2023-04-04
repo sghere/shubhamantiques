@@ -40,7 +40,7 @@ const ProductPage = () => {
   //     img={img}
   //     ProductName={e.title}
   //     ProductDescription={e.description}
-  //     ProductPrice={'$' + e.price}
+  //     ProductPrice={"$" + e.price}
   //   />
   // ));
 
